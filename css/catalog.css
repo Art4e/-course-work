@@ -1,0 +1,31 @@
+.catalog {
+}
+.catalog__head {
+  display: flex;
+}
+.catalog__header {
+}
+.lang-select {
+  display: flex;
+  justify-content: space-between;
+}
+.select__item {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
+.select__item_FR {
+  background: url("../img/catalog/FR.png") 50% / cover no-repeat;
+}
+.select__item_DE {
+  background: url("../img/catalog/DE.png") 50% / cover no-repeat;
+}
+.select__item_RU {
+  background: url("../img/catalog/RU.png") 50% / cover no-repeat;
+}
+.select__item_BEL {
+  background: url("../img/catalog/BEL.png") 50% / cover no-repeat;
+}
+.select__item_IT {
+  background: url("../img/catalog/IT.png") 50% / cover no-repeat;
+}
