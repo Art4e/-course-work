@@ -12,8 +12,8 @@
     margin-left: calc(21.84vw - 199.31px);
   }
 
-  .filtr__item {
-    margin-right: calc(10.56vw - 91.667px);
+  .head-down__menu-item {
+    margin-right: calc(8.33vw - 65px);
   }
 
   .header__solutions {
@@ -38,11 +38,11 @@
     font-size: 1.4rem;
   }
 
-  .filtr__item {
+  .head-down__menu-item {
     margin-right: 35px;
   }
 
-  .filtr__item::after {
+  .head-down__menu-item::after {
     top: 8px;
   }
 
@@ -53,9 +53,15 @@
   .search__input::placeholder {
     font-size: 1.4rem;
   }
+  .gallery-slider.swiper-container {
+    height: 710px;
+  }
 }
 
 @media (max-width: 1050px) {
+  .body_lock {
+    overflow: hidden;
+  }
   .container {
     padding-left: 50px;
     padding-right: 50px;
@@ -65,12 +71,40 @@
     display: flex;
   }
 
+  .header-slider.swiper-container {
+    height: 768px;
+  }
+
   .header__burger {
     display: block;
     order: 0;
   }
   .burger__menu {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: absolute;
+    top: -768px;
+    left: 0;
+    right: 0;
+    height: 768px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 50px;
+    -webkit-transition: top 0.3s ease-in-out;
+    transition: top 0.3s ease-in-out;
+  }
+  .burger__menu.burger__menu_activ {
+    top: 0;
+  }
+  .header__menu {
+    z-index: 1900;
+    display: block;
+    padding-top: 46px;
+    line-height: 6.4rem;
+    font-size: 2.4rem;
+    font-weight: 600;
+    overflow: auto;
+    margin-left: -2px;
   }
   .logo {
     margin: 29px 0;
@@ -78,9 +112,14 @@
   .logo__img {
     width: 188px;
   }
-  .come-in {
-    display: none;
-    margin-left: 30px;
+  .come-in.btn {
+    margin-left: 0;
+    margin-top: 113px;
+    padding: 28px 91px 28px 86px;
+    letter-spacing: 1.5px;
+  }
+  .come-in__svg {
+    margin-right: 8px;
   }
   .head-down {
     display: none;
@@ -90,7 +129,7 @@
   }
   .solutions__tagline {
     margin-top: 12px;
-    padding-right: 250px;
+    padding-right: calc(97.66vw - 750px);
     line-height: 1.9;
     letter-spacing: 1.6px;
   }
@@ -99,7 +138,7 @@
   }
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1024px) {
 }
 
 @media (max-width: 930px) {

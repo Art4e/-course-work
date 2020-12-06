@@ -26,6 +26,7 @@
   --link-focus-outline: 2px solid #7943a4;
   --link-focus: #7943a4;
   --link-hover: #c283f3;
+  --btn-border-radius: calc(100 / 2 * 1px);
 }
 
 * {
@@ -172,8 +173,8 @@ body {
 }
 
 .btn {
-  border: var(--main-highlight-color);
-  border-radius: 32px;
+  border: 2px solid var(--main-highlight-color);
+  border-radius: var(--btn-border-radius);
   color: var(--fonts-secondary-color);
 }
 

@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/tabsmenu.css">
   <link rel="stylesheet" href="./css/choices.min.css">
+  <link rel="stylesheet" href="./css/simplebar.css">
 
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/header.css">
@@ -22,6 +23,7 @@
 
   <script defer src="js/swiper-bundle.min.js"></script>
   <script defer src="js/choices.min.js"></script>
+  <script defer src="js/simplebar.min.js"></script>
   <script defer src="js/scroll.js"></script>
   <script defer src="js/tabsmenu.js"></script>
   <script defer src="js/accordeon.js"></script>
@@ -35,19 +37,19 @@
     <div class="header-slider swiper-container">
       <div class="swiper-wrapper">
         <picture class="header-slider__slide swiper-slide">
-          <source class="header-slider__img" srcset="./img/hero/hero-1_1024.jpg" media="(max-width: 1024px)">
+          <source class="header-slider__img" srcset="./img/hero/hero-1_1024.jpg" media="(max-width: 1050px)">
           <source class="header-slider__img" srcset="./img/hero/hero-1_768.jpg" media="(max-width: 768px)">
           <source class="header-slider__img" srcset="./img/hero/hero-1_320.jpg" media="(max-width: 320px)">
           <img class="header-slider__img" src="./img/hero/hero-1.jpg" alt="MDN">
         </picture>
         <picture class="header-slider__slide swiper-slide">
-          <source class="header-slider__img" srcset="./img/hero/hero-2_1024.jpg" media="(max-width: 1024px)">
+          <source class="header-slider__img" srcset="./img/hero/hero-2_1024.jpg" media="(max-width: 1050px)">
           <source class="header-slider__img" srcset="./img/hero/hero-2_768.jpg" media="(max-width: 768px)">
           <source class="header-slider__img" srcset="./img/hero/hero-2_320.jpg" media="(max-width: 320px)">
           <img class="header-slider__img" src="./img/hero/hero-2.jpg" alt="MDN">
         </picture>
         <picture class="header-slider__slide swiper-slide">
-          <source class="header-slider__img" srcset="./img/hero/hero-3_1024.jpg" media="(max-width: 1024px)">
+          <source class="header-slider__img" srcset="./img/hero/hero-3_1024.jpg" media="(max-width: 1050px)">
           <source class="header-slider__img" srcset="./img/hero/hero-3_768.jpg" media="(max-width: 768px)">
           <source class="header-slider__img" srcset="./img/hero/hero-3_320.jpg" media="(max-width: 320px)">
           <img class="header-slider__img" src="./img/hero/hero-3.jpg" alt="MDN">
@@ -55,8 +57,8 @@
       </div>
     </div>
     <div class="head-up__container">
-      <div class="container head-up">
-        <button class="header__burger js-header__burger" aria-label="Навигация сайта">
+      <div class="container head-up js-head-up">
+        <button class="header__burger link-interaction js-header__burger" aria-label="Навигация сайта">
           <span class="burger__body"></span>
         </button>
         <div class="logo">
@@ -64,7 +66,7 @@
             <img class="logo__img" src="./img/hero/logo.svg" alt="Логотип компании Евклид-проектные системы">
           </a>
         </div>
-        <div class="burger__menu">
+        <div class="burger__menu js-burger__menu">
           <nav class="navigation">
             <ul class="header__menu jsHeaderMenu">
               <li class="header__item">
@@ -90,7 +92,7 @@
               </li>
             </ul>
           </nav>
-          <div class="come-in link-interaction link-interaction" tabindex="0">
+          <div class="come-in link-interaction js-come-in" tabindex="0">
             <svg class="come-in__svg" width="13" height="13" viewBox="0 0 13 13" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -99,53 +101,81 @@
             <span>Войти<span>
           </div>
         </div>
-        <button class="header__burger js-header__burger" aria-label="Поиск по сайту">
-          <span class="burger__open-search"></span>
-        </button>
+        <!-- <div class="search__container js-search__container" aria-label="Поиск по сайту">
+
+        </div> -->
       </div>
     </div>
     <div class="down-up__container">
-      <div class="container head-down">
-        <ul class="header__filtr">
-          <li class="filtr__item link-interaction" tabindex="0">
-            <select name="select" class="filter__author" aria-placeholder="">
-              <option value="Верроккьо">Верроккьо</option>
-              <option value="Леонардо">Леонардо</option>
-              <option value="Фридрих">Фридрих</option>
-              <option value="Тинторетто">Тинторетто</option>
-            </select>
+      <div class="container head-down js-head-down">
+        <ul class="head-down__menu">
+          <li class="head-down__menu-item realism" tabindex="0">
+            <span class="menu-item__head link-interaction">
+              Реализм
+            </span>
+            <div class="menu-item__authors-test">
+              <ul class="menu-item__authors">
+                <li class="autor__item">Верроккьо</li>
+                <li class="autor__item">Леонардо</li>
+                <li class="autor__item">Фридрих</li>
+                <li class="autor__item">Тинторетто</li>
+              </ul>
+            </div>
           </li>
-          <li class="filtr__item link-interaction" tabindex="0">
-            <select name="select" class="filter__author">
-              <option value="Ренуар">Ренуар</option>
-              <option value="Мане">Мане</option>
-              <option value="Сислей">Сислей</option>
-              <option value="Моне">Моне</option>
-            </select>
+          <li class="head-down__menu-item impressionism" tabindex="0">
+            <span class="menu-item__head link-interaction">
+              Импрессионизм
+            </span>
+            <div class="menu-item__authors-test">
+              <ul class="menu-item__authors">
+                <li class="autor__item">Мане</li>
+                <li class="autor__item">Сислей</li>
+                <li class="autor__item">Моне</li>
+                <li class="autor__item">Ренуар</li>
+              </ul>
+            </div>
           </li>
-          <li class="filtr__item link-interaction" tabindex="0">
-            <select name="select" class="filter__author">
-              <option value="Автор 1">Постимпрессионизм</option>
-              <option value="Автор 2">Автор 2</option>
-              <option value="Автор 3">Автор 3</option>
-            </select>
+          <li class="head-down__menu-item post-impressionism" tabindex="0">
+            <span class="menu-item__head link-interaction">
+              Постимпрессионизм
+            </span>
+            <div class="menu-item__authors-test">
+              <ul class="menu-item__authors">
+                <li class="autor__item">Ван Гог</li>
+                <li class="autor__item">Сезанн</li>
+                <li class="autor__item">Гоген</li>
+                <li class="autor__item">Сёра</li>
+              </ul>
+            </div>
           </li>
-          <li class="filtr__item link-interaction" tabindex="0">
-            <select name="select" class="filter__author">
-              <option value="Автор 1">Авангард</option>
-              <option value="Автор 2">Автор 2</option>
-              <option value="Автор 3">Автор 3</option>
-            </select>
+          <li class="head-down__menu-item vanguard" tabindex="0">
+            <span class="menu-item__head link-interaction">
+              Авангард
+            </span>
+            <div class="menu-item__authors-test">
+              <ul class="menu-item__authors">
+                <li class="autor__item">Кандинский</li>
+                <li class="autor__item">Маринетти</li>
+                <li class="autor__item">Малевич</li>
+                <li class="autor__item">Пикассо</li>
+              </ul>
+            </div>
           </li>
-          <li class="filtr__item link-interaction" tabindex="0">
-            <select name="select" class="filter__author">
-              <option value="Автор 1">Футуризм</option>
-              <option value="Автор 2">Автор 2</option>
-              <option value="Автор 3">Автор 3</option>
-            </select>
+          <li class="head-down__menu-item futurism" tabindex="0">
+            <span class="menu-item__head link-interaction">
+              Футуризм
+            </span>
+            <div class="menu-item__authors-test">
+              <ul class="menu-item__authors">
+                <li class="autor__item">Карра</li>
+                <li class="autor__item">Прателла</li>
+                <li class="autor__item">Северини</li>
+                <li class="autor__item">Балла</li>
+              </ul>
+            </div>
           </li>
         </ul>
-        <form class="header__search link-interaction" tabindex="0" preventdefault>
+        <form class="header__search link-interaction js-header__search" tabindex="0" preventdefault>
           <!-- По заданию выделение при табе включает в себя всю форму
           по этому мы не видем выделения кнопки поиска или убирать кнопку и отслеживать submit? -->
           <button class="search__button" type="submit">
@@ -196,7 +226,7 @@
           <div class="gallery-body">
             <div class="filter">
               <p class="filter__header">Фильтровать по:</p>
-              <select name="select" class="filter__author">
+              <select name="select" class="menu-item__authors">
                 <option value="Автор 1">Автор 1</option>
                 <option value="Автор 2">Автор 2</option>
                 <option value="Автор 3">Автор 3</option>
@@ -259,14 +289,14 @@
         <h2 class="catalog__header header__h2" id="catalog">
           Каталог
         </h2>
-        <ul class="lang-select jsTabsMenu">
-          <li class="select__item select__item_FR"></li>
-          <li class="select__item select__item_DE"></li>
-          <li class="select__item select__item_IT"></li>
-          <li class="select__item select__item_RU jsActiveTab"></li>
-          <li class="select__item select__item_BEL"></li>
-        </ul>
       </div>
+      <ul class="lang-select jsTabsMenu">
+        <li class="select__item select__item_FR"></li>
+        <li class="select__item select__item_DE"></li>
+        <li class="select__item select__item_IT"></li>
+        <li class="select__item select__item_RU jsActiveTab"></li>
+        <li class="select__item select__item_BEL"></li>
+      </ul>
       <ul class="jsTabsContainer">
         <li class="tab__Item">
           <!-- <h3>Контейнер 1</h3> -->

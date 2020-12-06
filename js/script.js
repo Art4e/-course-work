@@ -25,6 +25,43 @@
       },
     });
 
+    const burgerEl = document.querySelector('.js-header__burger');
+    burgerEl.addEventListener('click', () => {
+      const bodyEl = document.querySelector('body');
+      const burgerMenuEl = document.querySelector('.js-burger__menu');
+      const comeInEl = document.querySelector('.js-come-in');
+
+      bodyEl.classList.toggle('body_lock');
+      burgerEl.classList.toggle('header__burger-activ');
+      burgerMenuEl.classList.toggle('burger__menu_activ');
+      comeInEl.classList.toggle('btn');
+    });
+
+    // отслеживаем размеры окна
+    ; (() => {
+      const mediaQueryList = window.matchMedia('(max-width: 1050px)');
+
+      function movingFormSearch(e) {
+        const formSearchEl = document.querySelector('.js-header__search');
+        const inContainerSearchEl = document.querySelector('.js-head-up')
+        // const outContainerSearchEl = document.querySelector('js-head-down')
+
+        if (e.matches) {
+          inContainerSearchEl.append(formSearchEl);
+        } else {
+          const formEl = inContainerSearchEl.querySelector('.js-header__search');
+          // inContainerSearchEl.remove(formEl);
+          // outContainerSearchEl.forEach(el, () => {
+          // })
+          console.log(formEl)
+          // outContainerSearchEl.appendChild(formSearchEl);
+        };
+      }
+
+      mediaQueryList.addListener(movingFormSearch);
+    })();
+
+
     const swiperGallery = new Swiper('.gallery-slider', {
       // loop: true,
       slidesPerView: 3,
@@ -63,6 +100,18 @@
         });
       });
     })();
+
+    // Создаем аккардион
+
+    crteatAccordion('.col-right__header');
+    crteatAccordion('.menu-item__head');
+
+    // Изменяем скролл 
+    const elForScrolling = document.querySelectorAll('.menu-item__authors');
+
+    elForScrolling.forEach(el => {
+      new SimpleBar(el, { autoHide: false });
+    });
 
   });
 

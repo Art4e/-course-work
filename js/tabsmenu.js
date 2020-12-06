@@ -19,9 +19,6 @@
 	function switchBlock(menu, currIndex, tabItem) {
 		const blocks = tabItem.querySelectorAll('.tab__Item');
 
-
-		console.log(tabItem);
-
 		[].forEach.call(blocks, (block, index) => {
 			block.removeAttribute('style');
 			if (index == currIndex) block.style.display = 'block';
