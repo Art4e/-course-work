@@ -41,5 +41,5 @@
 	};
 
 	creatTab('.jsTabsMenu', ".jsTabsContainer");
-	creatTab('.jsTabsMenu1', ".jsTabsContainer1");
+	// creatTab('.jsTabsMenu1', ".jsTabsContainer1");
 })();

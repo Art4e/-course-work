@@ -1,11 +1,3 @@
-.about-us {
-  padding-top: 80px;
-  padding-bottom: 70px;
-}
-
-.about-us__header {}
-
-.about-us__body {
-  padding-top: 16px;
-  padding-right: 595.43px;
+.about-us__header {
+  padding-bottom: 16px;
 }

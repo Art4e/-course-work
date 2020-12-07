@@ -49,15 +49,15 @@
             })
         };
 
-        document.onclick = function (e) {
-            if (!e.target.classList.contains('active')) {
-                const activeAccordeon = document.querySelectorAll('.active');
-                activeAccordeon.forEach(el => {
-                    if (el.classList.contains('active')) {
-                        el.classList.remove('active')
-                    };
-                });
-            }
-        };
+        // document.onclick = function (e) {
+        //     if (!e.target.classList.contains('active')) {
+        //         const activeAccordeon = document.querySelectorAll('.active');
+        //         activeAccordeon.forEach(el => {
+        //             if (el.classList.contains('active')) {
+        //                 el.classList.remove('active')
+        //             };
+        //         });
+        //     }
+        // };
     };
 })();

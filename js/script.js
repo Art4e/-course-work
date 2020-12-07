@@ -68,7 +68,14 @@
       // const searchButtonEl = document.querySelector('.js-search__button');
       formSearchEl.addEventListener('focus', () => {
         console.log(formSearchEl);
-        console.log('нажал');
+        console.log('фокус');
+        // const bodyEl = document.querySelector('body');
+        // burgerMenuEl.classList.toggle('burger__menu_activ');
+        // comeInEl.classList.toggle('btn');
+      });
+      formSearchEl.addEventListener('blur', () => {
+        console.log(formSearchEl);
+        console.log('фокус');
         // const bodyEl = document.querySelector('body');
         // burgerMenuEl.classList.toggle('burger__menu_activ');
         // comeInEl.classList.toggle('btn');
@@ -77,18 +84,57 @@
       mediaQueryList.addListener(movingFormSearch);
     })();
 
+    ; (() => {
+      const buttonEl = document.querySelector('.js-event-card__btn');
+      const deactivatedEl = document.querySelectorAll('.deactivated');
 
+      buttonEl.addEventListener('click', () => {
+
+        deactivatedEl.forEach(el => {
+          console.log(el.classList);
+          el.classList.toggle('deactivated')
+        });
+      });
+    })();
 
     // слайдер галерея
     const swiperGallery = new Swiper('.gallery-slider', {
       // loop: true,
-      slidesPerView: 3,
+      // slidesPerView: 3,
       slidesPerColumn: 2,
-      spaceBetween: 50,
+      // spaceBetween: 50,
+      breakpoints: {
+
+        1200: {
+          slidesPerView: 3,
+          slidesPerColumn: 2,
+          spaceBetween: 50
+        },
+        1000: {
+          slidesPerView: 2,
+          slidesPerColumn: 2,
+          spaceBetween: 40
+        },
+        900: {
+          slidesPerView: 3,
+          slidesPerColumn: 2,
+          spaceBetween: 50
+        },
+        500: {
+          slidesPerView: 2,
+          slidesPerColumn: 2,
+          spaceBetween: 30
+        },
+        320: {
+          slidesPerView: 1,
+          slidesPerColumn: 1
+        }
+
+      },
       // slidesPerColumnFill: 'row',
       navigation: {
-        nextEl: 'swiper-button-next',
-        prevEl: 'swiper-button-prev'
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
       },
       a11y: {
         prevSlideMessage: 'Предыдущий слайд',
@@ -103,6 +149,41 @@
         //   return '<span class="' + className + '">' + (index + 1) + '</span> >';
         // },
       }
+    });
+
+    // слайдер партнеры
+    const swiperPartners = new Swiper('.projects__slaider', {
+      breakpoints: {
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 50
+        },
+        1000: {
+          slidesPerView: 2,
+          spaceBetween: 40
+        },
+        900: {
+          slidesPerView: 3,
+          spaceBetween: 50
+        },
+        500: {
+          slidesPerView: 2,
+          spaceBetween: 30
+        },
+        320: {
+          slidesPerView: 1,
+          slidesPerColumn: 1
+        }
+
+      },
+      navigation: {
+        nextEl: '.projects-slaider-next',
+        prevEl: '.projects-slaider-prev'
+      },
+      a11y: {
+        prevSlideMessage: 'Предыдущий слайд',
+        nextSlideMessage: 'Следующий слайд'
+      },
     });
 
     // выбор элементов select, применение к ним Choices

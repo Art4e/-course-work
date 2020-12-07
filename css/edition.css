@@ -1,0 +1,7 @@
+.edition {
+  background: url("../img/edition/edition-bg.jpg");
+}
+
+.edition__header {
+  color: var(--fonts-secondary-color);
+}

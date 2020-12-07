@@ -167,12 +167,17 @@ body {
   margin: 0 auto;
 }
 
+.section {
+  margin-bottom: 80px;
+}
+
 .header__h2 {
   font-size: 4.8rem;
   line-height: 6.5rem;
 }
 
 .btn {
+  background: none;
   border: 2px solid var(--main-highlight-color);
   border-radius: var(--btn-border-radius);
   color: var(--fonts-secondary-color);
@@ -183,9 +188,11 @@ body {
   outline-offset: 2px;
   color: var(--link-focus);
 }
+
 .link-interaction:hover {
   color: var(--link-hover);
 }
+
 .link-interaction:active {
   color: var(--link-active) #7943a4;
 }
@@ -200,16 +207,24 @@ body {
   font-size: 1.8rem;
   line-height: 1;
 }
+
 .choices__list--single {
   padding: 0 16px 0 2px;
   width: 100%;
 }
+
 .choices[data-type*="select-one"]:after {
   content: none;
 }
+
 .choices[data-type*="select-one"] .choices__inner {
   padding-bottom: 0;
 }
+
 .choices[data-type*="select-one"] .choices__input {
   padding: 0;
+}
+
+.block__text {
+  padding-right: 595.43px;
 }
