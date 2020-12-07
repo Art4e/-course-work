@@ -25,6 +25,7 @@
       },
     });
 
+    // Открываем, закрываем бургер меню
     const burgerEl = document.querySelector('.js-header__burger');
     burgerEl.addEventListener('click', () => {
       const bodyEl = document.querySelector('body');
@@ -39,29 +40,46 @@
 
     // отслеживаем размеры окна
     ; (() => {
-      const mediaQueryList = window.matchMedia('(max-width: 1050px)');
-
+      const SIZE_SCRIN = 1050;
+      const pageWidth = Math.max(
+        document.body.scrollWidth, document.documentElement.scrollWidth,
+        document.body.offsetWidth, document.documentElement.offsetWidth,
+        document.body.clientWidth, document.documentElement.clientWidth
+      );
+      const formSearchEl = document.querySelector('.js-header__search');
+      const inContainerSearchEl = document.querySelector('.js-head-up')
+      // при загрузке сравниваем размер окна с нужным SIZE_SCRIN
+      // если равно или меньше добавляем поиск в верхнее меню
+      if (pageWidth <= SIZE_SCRIN) {
+        inContainerSearchEl.append(formSearchEl);
+      }
+      //отслеживаем прохождения медиазапроса с разрешением SIZE_SCRIN
+      // добавляем или удаляем поиск из верхнего меню
+      const mediaQueryList = window.matchMedia(`(max-width: ${SIZE_SCRIN}px)`);
       function movingFormSearch(e) {
-        const formSearchEl = document.querySelector('.js-header__search');
-        const inContainerSearchEl = document.querySelector('.js-head-up')
-        // const outContainerSearchEl = document.querySelector('js-head-down')
-
         if (e.matches) {
           inContainerSearchEl.append(formSearchEl);
         } else {
-          const formEl = inContainerSearchEl.querySelector('.js-header__search');
-          // inContainerSearchEl.remove(formEl);
-          // outContainerSearchEl.forEach(el, () => {
-          // })
-          console.log(formEl)
-          // outContainerSearchEl.appendChild(formSearchEl);
+          formSearchEl.remove();
         };
       }
+
+      // обработка вида поиска при раскрытии на малых разрешениях
+      // const searchButtonEl = document.querySelector('.js-search__button');
+      formSearchEl.addEventListener('focus', () => {
+        console.log(formSearchEl);
+        console.log('нажал');
+        // const bodyEl = document.querySelector('body');
+        // burgerMenuEl.classList.toggle('burger__menu_activ');
+        // comeInEl.classList.toggle('btn');
+      });
 
       mediaQueryList.addListener(movingFormSearch);
     })();
 
 
+
+    // слайдер галерея
     const swiperGallery = new Swiper('.gallery-slider', {
       // loop: true,
       slidesPerView: 3,

@@ -121,6 +121,31 @@
   .come-in__svg {
     margin-right: 8px;
   }
+
+  .header__search:hover .search__input,
+  .header__search:focus .search__input,
+  .search__input:focus,
+  .search__input:active {
+    margin-left: 9px;
+    width: 180px;
+  }
+  .search__input {
+    margin-left: 0;
+    width: 0;
+    transition: width 0.5s, margin-left 0.5s;
+    -webkit-transition: width 0.5s, margin-left 0.5s;
+  }
+  .header__search {
+    margin-left: 0;
+    transition: width 0.5s, margin-left 0.5s;
+    -webkit-transition: width 0.5s, margin-left 0.5s;
+  }
+  .header__search:hover,
+  .header__search:focus,
+  .header__search:focus-within,
+  .header__search:active {
+    margin-left: -189px;
+  }
   .head-down {
     display: none;
   }
