@@ -37,7 +37,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header section">
     <h1 class="visually-hidden">Blanchard художественная галерея - прикоснитесь к прекрасному</h1>
     <div class="header-slider swiper-container">
       <div class="swiper-wrapper">
@@ -447,75 +447,75 @@
         <li class="developments__event-card">
           <figure class="event-card">
             <img class="event-card__img" src="./img/developments/1.jpg" alt="Изображение гравюры">
-            <figcaption>
-              <span class="event-card__signature">Музей им. Щусева с 20 марта по 30 апреля</span>
+            <figcaption class="event-card__body">
+              <span class="event-card__signature">Музей им. Щусева<br>с 20 марта по 30 апреля</span>
               <h3 class="event-card__header header__h3">Книжная гравюра в живом восприятии</h3>
               <p class="event-card__text">
                 Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
                 продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело.
               </p>
-              <a class="event-card__link" href="#">Подробнее</a>
             </figcaption>
           </figure>
+          <a class="event-card__link" href="#">Подробнее</a>
         </li>
         <li class="developments__event-card">
           <figure class="event-card">
             <img class="event-card__img" src="./img/developments/2.jpg" alt="Красочный ветраж">
-            <figcaption>
-              <span class="event-card__signature">ММОМА 24 марта 19:00</span>
+            <figcaption class="event-card__body">
+              <span class="event-card__signature">ММОМА<br>24 марта 19:00</span>
               <h3 class="event-card__header header__h3">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
               <p class="event-card__text">
                 Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого
                 факта: постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент
                 проверки новых принципов формирования...
               </p>
-              <a class="event-card__link" href="#">Подробнее</a>
             </figcaption>
           </figure>
+          <a class="event-card__link" href="#">Подробнее</a>
         </li>
         <li class="developments__event-card">
           <figure class="event-card">
             <img class="event-card__img" src="./img/developments/3.jpg" alt="Зал Еврейского музея">
-            <figcaption>
-              <span class="event-card__signature">Еврейский музей с 31 марта по 21 апреля</span>
+            <figcaption class="event-card__body">
+              <span class="event-card__signature">Еврейский музей<br>с 31 марта по 21 апреля</span>
               <h3 class="event-card__header header__h3">Выставка «Формация 2020»</h3>
               <p class="event-card__text">
                 Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в
                 формировании глубокомысленных рассуждений. Также как перспективное планирование играет определяющее
                 значение для новых принципов формирования материально-технической и кадровой базы.
               </p>
-              <a class="event-card__link" href="#">Подробнее</a>
             </figcaption>
           </figure>
+          <a class="event-card__link" href="#">Подробнее</a>
         </li>
         <li class="developments__event-card deactivated">
           <figure class="event-card">
             <img class="event-card__img" src="./img/developments/4.jpg" alt="Разноцветная инсталяция">
-            <figcaption>
-              <span class="event-card__signature">Третьяковка на Крымском валу с 30 марта по 30 апреля</span>
+            <figcaption class="event-card__body">
+              <span class="event-card__signature">Третьяковка на Крымском валу<br>с 30 марта по 30 апреля</span>
               <h3 class="event-card__header header__h3">XXIV Международная биеннале молодого искусства</h3>
               <p class="event-card__text">
                 Внезапно, реплицированные с зарубежных источников, современные исследования представляют собой не что
                 иное, как квинтэссенцию победы маркетинга над разумом и должны быть рассмотрены исключительно в разрезе
                 маркетинговых и финансовых...
               </p>
-              <a class="event-card__link" href="#">Подробнее</a>
             </figcaption>
           </figure>
+          <a class="event-card__link" href="#">Подробнее</a>
         </li>
         <li class="developments__event-card deactivated">
           <figure class="event-card">
             <img class="event-card__img" src="./img/developments/5.jpg" alt="Зал Еврейского музея">
-            <figcaption>
-              <span class="event-card__signature">ММАМ с 8 апреля по 20 мая</span>
+            <figcaption class="event-card__body">
+              <span class="event-card__signature">ММАМ<br>с 8 апреля по 20 мая</span>
               <h3 class="event-card__header header__h3">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
               <p class="event-card__text">
                 Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
                 продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело.
               </p>
-              <a class="event-card__link" href="#">Подробнее</a>
             </figcaption>
           </figure>
+          <a class="event-card__link" href="#">Подробнее</a>
         </li>
       </ul>
       <button class="event-card__btn btn js-event-card__btn">Все события</button>
@@ -525,6 +525,79 @@
         Издания
       </h2>
       <div class="container">
+        <form class="form__checkbox">
+          <h3 class="checkbox__head header__h3">Категории:</h3>
+          <label class="checkbox__label">
+            <input class="checkbox" type="checkbox" name="Best-sellers" value="Best-sellers">
+            <span class="checkbox__marker"></span>
+            Бестселлеры
+          </label>
+          <label class="checkbox__label">
+            <input class="checkbox" type="checkbox" name="Art" value="Art">
+            <span class="checkbox__marker"></span>
+            Искусство
+          </label>
+          <label class="checkbox__label">
+            <input class="checkbox" type="checkbox" name="Architecture" value="Architecture">
+            <span class="checkbox__marker"></span>
+            Архитектура
+          </label>
+          <label class="checkbox__label">
+            <input class="checkbox" type="checkbox" name="Design" value="Design">
+            <span class="checkbox__marker"></span>
+            Дизайн
+          </label>
+          <label class="checkbox__label">
+            <input class="checkbox" type="checkbox" name="Fashion" value="Fashion">
+            <span class="checkbox__marker"></span>
+            Мода
+          </label>
+          <label class="checkbox__label">
+            <input class="checkbox" type="checkbox" name="Children" value="Children">
+            <span class="checkbox__marker"></span>
+            Детям
+          </label>
+          <label class="checkbox__label">
+            <input class="checkbox" type="checkbox" name="Fiction" value="Fiction">
+            <span class="checkbox__marker"></span>
+            Художественная литература
+          </label>
+          <label class="checkbox__label">
+            <input class="checkbox" type="checkbox" name="Journalism" value="Journalism">
+            <span class="checkbox__marker"></span>
+            Публицистика
+          </label>
+          <label class="checkbox__label">
+            <input class="checkbox" type="checkbox" name="Travel guides" value="Travel guides">
+            <span class="checkbox__marker"></span>
+            Путеводители
+          </label>
+          <label class="checkbox__label">
+            <input class="checkbox" type="checkbox" name="Philosophy" value="Philosophy">
+            <span class="checkbox__marker"></span>
+            Философия
+          </label>
+          <label class="checkbox__label">
+            <input class="checkbox" type="checkbox" name="Educational literature" value="Educational literature">
+            <span class="checkbox__marker"></span>
+            Учебная литература
+          </label>
+          <label class="checkbox__label">
+            <input class="checkbox" type="checkbox" name="Magazines and newspapers" value="Magazines and newspapers">
+            <span class="checkbox__marker"></span>
+            Журналы и газеты
+          </label>
+          <h3 class="checkbox__head header__h3">Цена</h3>
+          <div class="checkbox__price">
+            <label class="price__label" for="price-from">От</label>
+            <input class="price__input" type="text" name="price-from" placeholder="50">
+            <label class="price__label" for="price-to">до</label>
+            <input class="price__input" type="text" name="price-to" placeholder="25 000">
+            <span class="price__label">рублей</span>
+          </div>
+        </form>
+        <div class="edition__slider">
+        </div>
       </div>
 
     </section>

@@ -1,7 +1,62 @@
 .edition {
+  padding-top: 80px;
   background: url("../img/edition/edition-bg.jpg");
+  color: var(--fonts-secondary-color);
 }
 
 .edition__header {
+}
+.form__checkbox {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  width: 340px;
+  /* padding: 20px 30px 30px; */
+}
+.checkbox__head {
+  font-size: 1.6rem;
+  font-weight: 700;
   color: var(--fonts-secondary-color);
+}
+.checkbox__label {
+  position: relative;
+  padding: 0 0 0 24px;
+  cursor: pointer;
+  line-height: 2;
+}
+.checkbox {
+  display: none;
+}
+.checkbox__marker {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  text-align: center;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  transform: translateY(-50%);
+}
+.checkbox:checked + .checkbox__marker {
+  background: url("../img/check.svg") 50% 50% no-repeat;
+}
+.checkbox:checked ~ .checkbox__label {
+  outline: 3px solid blue;
+}
+.checkbox__price {
+  display: flex;
+  justify-content: space-between;
+  width: 341px;
+  padding: 0 19px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+}
+.price__label {
+}
+.price__input {
+  width: 82px;
+  background: rgba(157, 92, 208, 0.5);
+}
+.edition__slider {
 }
