@@ -1,0 +1,38 @@
+.projects__header {
+  margin-bottom: 15px;
+}
+
+.projects__text {}
+
+.projects__tooltip {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  /* padding-top: 2px; */
+  background: url("../img/projects/i.svg") 50% no-repeat;
+  background-color: var(--main-highlight-color);
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--fonts-secondary-color);
+}
+
+.projects__tooltip_one {
+  /* width: 150px;
+  background: #CACACA; */
+}
+
+.projects__header-h3 {}
+
+.projects__slaider {}
+
+.swiper-container {}
+
+.projects-slaider-prev {}
+
+.projects-slaider-next {}
+
+.projects__slaids {}
+
+.swiper-wrapper {}
+
+.projects__slaid {}

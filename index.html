@@ -7,7 +7,7 @@
 
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/swiper-bundle.min.css">
-  <!-- <link rel="stylesheet" href="./css/tabsmenu.css"> -->
+  <link rel="stylesheet" href="./css/tooltip.css">
   <link rel="stylesheet" href="./css/choices.min.css">
   <link rel="stylesheet" href="./css/simplebar.css">
 
@@ -32,6 +32,7 @@
   <script defer src="js/scroll.js"></script>
   <script defer src="js/tabsmenu.js"></script>
   <script defer src="js/accordeon.js"></script>
+  <script defer src="js/tooltip.js"></script>
   <script defer src="js/script.js"></script>
 
 </head>
@@ -524,7 +525,7 @@
       <h2 class="edition__header header__h2 container" id="edition">
         Издания
       </h2>
-      <div class="container">
+      <div class="container container_edition">
         <form class="form__checkbox">
           <h3 class="checkbox__head header__h3">Категории:</h3>
           <label class="checkbox__label">
@@ -587,7 +588,7 @@
             <span class="checkbox__marker"></span>
             Журналы и газеты
           </label>
-          <h3 class="checkbox__head header__h3">Цена</h3>
+          <h3 class="checkbox__head checkbox__head_price header__h3">Цена</h3>
           <div class="checkbox__price">
             <label class="price__label" for="price-from">От</label>
             <input class="price__input" type="text" name="price-from" placeholder="50">
@@ -596,7 +597,92 @@
             <span class="price__label">рублей</span>
           </div>
         </form>
-        <div class="edition__slider">
+        <div class="edition__slider swiper-container">
+          <div class="edition-slider__navigation">
+            <div class="swiper-button-prev"></div>
+            <div class="edition-slider-pagination"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <ul class="edition__slides swiper-wrapper">
+            <li>
+              <img class="slides__item slides__img" src="./img/edition/edition-1.jpg" alt="Репрадукция картины">
+              <div>
+                <div>
+                  <span>Искусство цвета</span>
+                  Иттен, Иоханнес
+                </div>
+                <div>620 руб</div>
+              </div>
+              <button>Заказать</button>
+            </li>
+            <li>
+              <img class="slides__item slides__img" src="./img/edition/edition-02.jpg" alt="Репрадукция картины">
+              <div>
+                <div>
+                  <span>Типографика</span>
+                  Рудер, Эмиль
+                </div>
+                <div>2 450 руб</div>
+              </div>
+              <button>Заказать</button>
+            </li>
+            <li>
+              <img class="slides__item slides__img" src="./img/edition/edition-03.jpg" alt="Репрадукция картины">
+              <div>
+                <div>
+                  <span>Книга про буквы</span>
+                  Гордон, Юрий
+                </div>
+                <div>2 200 руб</div>
+              </div>
+              <button>Заказать</button>
+            </li>
+            <li>
+              <img class="slides__item slides__img" src="./img/edition/edition-04.jpg" alt="Репрадукция картины">
+              <div>
+                <div>
+                  <span>Николай Ильин</span>
+                  Кричевский, Владимир
+                </div>
+                <div>1 100 руб</div>
+              </div>
+              <button>Заказать</button>
+            </li>
+            <li>
+              <img class="slides__item slides__img" src="./img/edition/edition-05.jpg" alt="Репрадукция картины">
+              <div>
+                <div>
+                  <span>Модульные сетки в граф...</span>
+                  Мюллер-Брокманн, Йозеф
+                </div>
+                <div>1 450 руб</div>
+              </div>
+              <button>Заказать</button>
+            </li>
+            <li>
+              <img class="slides__item slides__img" src="./img/edition/edition-06.jpg" alt="Репрадукция картины">
+              <div>
+                <div>
+                  <span>Эволюция графических ст...</span>
+                  Хеллер, Чваст
+                </div>
+                <div>3 200 руб</div>
+              </div>
+              <button>Заказать</button>
+            </li>
+            <li>
+              <img class="slides__item slides__img" src="./img/edition/edition-07.jpg" alt="Репрадукция картины">
+              <div>
+                <div>
+                  <span>Искусство и визуальное в...</span>
+                  Арнхейм, Рудольф
+                </div>
+                <div>2 200 руб</div>
+              </div>
+              <button class="btn">Заказать</button>
+            </li>
+
+          </ul>
         </div>
       </div>
 
@@ -609,12 +695,21 @@
         Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно
         фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не
         уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде
-        всего, постоянное информационно-пропагандистское <span></span> обеспечение нашей деятельности однозначно
-        фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия
-        представителей оппозиции могут быть рассмотрены <span></span> исключительно в разрезе маркетинговых и финансовых
-        <span></span> предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных
-        резервов призывают нас к новым
-        свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной
+        всего, постоянное информационно-пропагандистское
+        <span class="projects__tooltip projects__tooltip_one"
+          data-tooltip="Пример современных тенденций - современная методология разработки">
+        </span>
+        обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых
+        решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены
+        <a class="projects__tooltip projects__tooltip_two tooltip"
+          aria-label="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции"
+          data-microtip-position="top" data-microtip-size="larg" role="tooltip"></a>
+        исключительно в разрезе маркетинговых и финансовых
+        <a class="projects__tooltip projects__tooltip_three tooltip" aria-label="В стремлении повысить качество"
+          data-microtip-position="top" data-microtip-size="fit" role="tooltip"></a>
+        предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов
+        призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до
+        степени совершенной
         неузнаваемости. Подробнее: <a href="#">blanchard-art.ru/projects/about</a>
       </p>
       <h3 class="projects__header-h3 header__h3">Партнёры проектов:</h3>

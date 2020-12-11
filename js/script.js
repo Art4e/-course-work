@@ -151,7 +151,16 @@
       }
     });
 
-    // слайдер партнеры
+    // tooltip - партнеры
+    const myTooltip = new Tooltip({
+      selector: '.projects__tooltip_one',
+      tooltipClass: 'projects__tooltip',
+      margin: 10,
+      position: 'top-center',
+    });
+
+
+    // слайдер - партнеры
     const swiperPartners = new Swiper('.projects__slaider', {
       breakpoints: {
         1200: {
