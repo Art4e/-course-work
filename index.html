@@ -7,7 +7,7 @@
 
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="./css/tooltip.css">
+  <!-- <link rel="stylesheet" href="./css/tooltip.css"> -->
   <link rel="stylesheet" href="./css/choices.min.css">
   <link rel="stylesheet" href="./css/simplebar.css">
 
@@ -32,7 +32,7 @@
   <script defer src="js/scroll.js"></script>
   <script defer src="js/tabsmenu.js"></script>
   <script defer src="js/accordeon.js"></script>
-  <script defer src="js/tooltip.js"></script>
+  <!-- <script defer src="js/tooltip.js"></script> -->
   <script defer src="js/script.js"></script>
 
 </head>
@@ -104,7 +104,7 @@
               <path
                 d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" />
             </svg>
-            <span>Войти<span>
+            <span>Войти</span>
           </div>
         </div>
         <!-- <div class="search__container js-search__container" aria-label="Поиск по сайту">
@@ -181,7 +181,7 @@
             </div>
           </li>
         </ul>
-        <form class="header__search link-interaction js-header__search" tabindex="0" preventdefault>
+        <form class="header__search link-interaction js-header__search" tabindex="0">
           <!-- По заданию выделение при табе включает в себя всю форму
           по этому мы не видем выделения кнопки поиска или убирать кнопку и отслеживать submit? -->
           <button class="search__button js-search__button" type="submit">
@@ -256,9 +256,9 @@
           </div>
         </div>
         <div class="gallery-slider swiper-container">
-          <div class="gallery-slider__navigation">
+          <div class="slider__navigation slider__navigation_gallery">
             <div class="swiper-button-prev"></div>
-            <div class="gallery-slider-pagination"></div>
+            <div class="slider__pagination slider__pagination_gallery"></div>
             <div class="swiper-button-next"></div>
           </div>
           <div class="swiper-wrapper">
@@ -591,101 +591,113 @@
           <h3 class="checkbox__head checkbox__head_price header__h3">Цена</h3>
           <div class="checkbox__price">
             <label class="price__label" for="price-from">От</label>
-            <input class="price__input" type="text" name="price-from" placeholder="50">
+            <input class="price__input" type="text" id="price-from" name="price-from" placeholder="50">
             <label class="price__label" for="price-to">до</label>
-            <input class="price__input" type="text" name="price-to" placeholder="25 000">
+            <input class="price__input" type="text" id="price-to" name="price-to" placeholder="25 000">
             <span class="price__label">рублей</span>
           </div>
         </form>
         <div class="edition__slider swiper-container">
-          <div class="edition-slider__navigation">
+          <div class="slider__navigation slider__navigation_edition">
             <div class="swiper-button-prev"></div>
-            <div class="edition-slider-pagination"></div>
+            <div class="slider__pagination slider__pagination_edition"></div>
             <div class="swiper-button-next"></div>
           </div>
           <ul class="edition__slides swiper-wrapper">
-            <li>
-              <img class="slides__item slides__img" src="./img/edition/edition-1.jpg" alt="Репрадукция картины">
-              <div>
-                <div>
-                  <span>Искусство цвета</span>
-                  Иттен, Иоханнес
+            <li class="swiper-slide">
+              <div class="edition-card">
+                <img class="edition-card__img" src="./img/edition/edition-1.jpg" alt="Репрадукция картины">
+                <div class="edition-card__body">
+                  <div class="edition-card__text">
+                    <span class="edition-card__header header__h3">Искусство цвета</span>
+                    Иттен, Иоханнес
+                  </div>
+                  <div class="edition-card__price">620 руб</div>
                 </div>
-                <div>620 руб</div>
+                <button class="edition-card__btn btn">Заказать</button>
               </div>
-              <button>Заказать</button>
             </li>
-            <li>
-              <img class="slides__item slides__img" src="./img/edition/edition-02.jpg" alt="Репрадукция картины">
-              <div>
-                <div>
-                  <span>Типографика</span>
-                  Рудер, Эмиль
+            <li class="swiper-slide">
+              <div class="edition-card">
+                <img class="edition-card__img" src="./img/edition/edition-02.jpg" alt="Репрадукция картины">
+                <div class="edition-card__body">
+                  <div class="edition-card__text">
+                    <span class="edition-card__header header__h3">Типографика</span>
+                    Рудер, Эмиль
+                  </div>
+                  <div class="edition-card__price">2 450 руб</div>
                 </div>
-                <div>2 450 руб</div>
+                <button class="edition-card__btn btn">Заказать</button>
               </div>
-              <button>Заказать</button>
             </li>
-            <li>
-              <img class="slides__item slides__img" src="./img/edition/edition-03.jpg" alt="Репрадукция картины">
-              <div>
-                <div>
-                  <span>Книга про буквы</span>
-                  Гордон, Юрий
+            <li class="swiper-slide">
+              <div class="edition-card">
+                <img class="edition-card__img" src="./img/edition/edition-03.jpg" alt="Репрадукция картины">
+                <div class="edition-card__body">
+                  <div class="edition-card__text">
+                    <span class="edition-card__header header__h3">Книга про буквы</span>
+                    Гордон, Юрий
+                  </div>
+                  <div class="edition-card__price">2 200 руб</div>
                 </div>
-                <div>2 200 руб</div>
+                <button class="edition-card__btn btn">Заказать</button>
               </div>
-              <button>Заказать</button>
             </li>
-            <li>
-              <img class="slides__item slides__img" src="./img/edition/edition-04.jpg" alt="Репрадукция картины">
-              <div>
-                <div>
-                  <span>Николай Ильин</span>
-                  Кричевский, Владимир
+            <li class="swiper-slide">
+              <div class="edition-card">
+                <img class="edition-card__img" src="./img/edition/edition-04.jpg" alt="Репрадукция картины">
+                <div class="edition-card__body">
+                  <div class="edition-card__text">
+                    <span class="edition-card__header header__h3">Николай Ильин</span>
+                    Кричевский, Владимир
+                  </div>
+                  <div class="edition-card__price">1 100 руб</div>
                 </div>
-                <div>1 100 руб</div>
+                <button class="edition-card__btn btn">Заказать</button>
               </div>
-              <button>Заказать</button>
             </li>
-            <li>
-              <img class="slides__item slides__img" src="./img/edition/edition-05.jpg" alt="Репрадукция картины">
-              <div>
-                <div>
-                  <span>Модульные сетки в граф...</span>
-                  Мюллер-Брокманн, Йозеф
+            <li class="swiper-slide">
+              <div class="edition-card">
+                <img class="edition-card__img" src="./img/edition/edition-05.jpg" alt="Репрадукция картины">
+                <div class="edition-card__body">
+                  <div class="edition-card__text">
+                    <span class="edition-card__header header__h3">Модульные сетки в граф...</span>
+                    Мюллер-Брокманн, Йозеф
+                  </div>
+                  <div class="edition-card__price">1 450 руб</div>
                 </div>
-                <div>1 450 руб</div>
+                <button class="edition-card__btn btn">Заказать</button>
               </div>
-              <button>Заказать</button>
             </li>
-            <li>
-              <img class="slides__item slides__img" src="./img/edition/edition-06.jpg" alt="Репрадукция картины">
-              <div>
-                <div>
-                  <span>Эволюция графических ст...</span>
-                  Хеллер, Чваст
+            <li class="swiper-slide">
+              <div class="edition-card">
+                <img class="edition-card__img" src="./img/edition/edition-06.jpg" alt="Репрадукция картины">
+                <div class="edition-card__body">
+                  <div class="edition-card__text">
+                    <span class="edition-card__header header__h3">Эволюция графических ст...</span>
+                    Хеллер, Чваст
+                  </div>
+                  <div class="edition-card__price">3 200 руб</div>
                 </div>
-                <div>3 200 руб</div>
+                <button class="edition-card__btn btn">Заказать</button>
               </div>
-              <button>Заказать</button>
             </li>
-            <li>
-              <img class="slides__item slides__img" src="./img/edition/edition-07.jpg" alt="Репрадукция картины">
-              <div>
-                <div>
-                  <span>Искусство и визуальное в...</span>
-                  Арнхейм, Рудольф
+            <li class="swiper-slide">
+              <div class="edition-card">
+                <img class="edition-card__img" src="./img/edition/edition-07.jpg" alt="Репрадукция картины">
+                <div class="edition-card__body">
+                  <div class="edition-card__text">
+                    <span class="edition-card__header header__h3">Искусство и визуальное в...</span>
+                    Арнхейм, Рудольф
+                  </div>
+                  <div class="edition-card__price">2 200 руб</div>
                 </div>
-                <div>2 200 руб</div>
+                <button class="edition-card__btn btn">Заказать</button>
               </div>
-              <button class="btn">Заказать</button>
             </li>
-
           </ul>
         </div>
       </div>
-
     </section>
     <section class="container projects section">
       <h2 class="projects__header header__h2" id="projects">
@@ -696,17 +708,12 @@
         фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не
         уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде
         всего, постоянное информационно-пропагандистское
-        <span class="projects__tooltip projects__tooltip_one"
-          data-tooltip="Пример современных тенденций - современная методология разработки">
-        </span>
+        <span class="projects__tooltip projects__tooltip_one"></span>
         обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых
         решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены
-        <a class="projects__tooltip projects__tooltip_two tooltip"
-          aria-label="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции"
-          data-microtip-position="top" data-microtip-size="larg" role="tooltip"></a>
+        <span class="projects__tooltip projects__tooltip_two"></span>
         исключительно в разрезе маркетинговых и финансовых
-        <a class="projects__tooltip projects__tooltip_three tooltip" aria-label="В стремлении повысить качество"
-          data-microtip-position="top" data-microtip-size="fit" role="tooltip"></a>
+        <span class="projects__tooltip projects__tooltip_three"></span>
         предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов
         призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до
         степени совершенной
@@ -715,50 +722,52 @@
       <h3 class="projects__header-h3 header__h3">Партнёры проектов:</h3>
 
       <div class="projects__slaider swiper-container">
-        <div class="projects-slaider-prev"></div>
-        <div class="projects-slaider-next"></div>
+        <div class="slider__navigation slider__navigation_projects">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
         <ul class="projects__slaids swiper-wrapper">
-          <li class="projects__slaid">
+          <li class="swiper-slide projects__slaid">
             <a href="#">
               <img src="./img/projects/01-project-partners.png" alt="Логотип компаниии партнера">
             </a>
           </li>
-          <li class="projects__slaid">
+          <li class="swiper-slide projects__slaid">
             <a href="#">
               <img src="./img/projects/02-project-partners.png" alt="Логотип компаниии партнера">
             </a>
           </li>
-          <li class="projects__slaid">
+          <li class="swiper-slide projects__slaid">
             <a href="#">
               <img src="./img/projects/03-project-partners.png" alt="Логотип компаниии партнера">
             </a>
           </li>
-          <li class="projects__slaid">
+          <li class="swiper-slide projects__slaid">
             <a href="#">
               <img src="./img/projects/04-project-partners.png" alt="Логотип компаниии партнера">
             </a>
           </li>
-          <li class="projects__slaid">
+          <li class="swiper-slide projects__slaid">
             <a href="#">
               <img src="./img/projects/05-project-partners.png" alt="Логотип компаниии партнера">
             </a>
           </li>
-          <li class="projects__slaid">
+          <li class="swiper-slide projects__slaid">
             <a href="#">
               <img src="./img/projects/06-project-partners.png" alt="Логотип компаниии партнера">
             </a>
           </li>
-          <li class="projects__slaid">
+          <li class="swiper-slide projects__slaid">
             <a href="#">
               <img src="./img/projects/07-project-partners.png" alt="Логотип компаниии партнера">
             </a>
           </li>
-          <li class="projects__slaid">
+          <li class="swiper-slide projects__slaid">
             <a href="#">
               <img src="./img/projects/08-project-partners.png" alt="Логотип компаниии партнера">
             </a>
           </li>
-          <li class="projects__slaid">
+          <li class="swiper-slide projects__slaid">
             <a href="#">
               <img src="./img/projects/09-project-partners.png" alt="Логотип компаниии партнера">
             </a>

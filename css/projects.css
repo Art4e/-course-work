@@ -1,19 +1,28 @@
+.projects {
+  min-width: 0;
+}
 .projects__header {
   margin-bottom: 15px;
 }
 
-.projects__text {}
+.projects__text {
+}
 
 .projects__tooltip {
+  position: relative;
   display: inline-block;
   width: 18px;
+}
+.projects__tooltip::after {
+  position: absolute;
+  content: "";
+  width: 18px;
   height: 18px;
-  /* padding-top: 2px; */
+  top: -14px;
   background: url("../img/projects/i.svg") 50% no-repeat;
   background-color: var(--main-highlight-color);
   border-radius: 50%;
   cursor: pointer;
-  color: var(--fonts-secondary-color);
 }
 
 .projects__tooltip_one {
@@ -21,18 +30,29 @@
   background: #CACACA; */
 }
 
-.projects__header-h3 {}
+.projects__header-h3 {
+}
 
-.projects__slaider {}
+.projects__slaider {
+  max-width: 1450px;
+}
 
-.swiper-container {}
+.swiper-container {
+}
+.slider__navigation_projects {
+}
 
-.projects-slaider-prev {}
+.projects-slaider-prev {
+}
 
-.projects-slaider-next {}
+.projects-slaider-next {
+}
 
-.projects__slaids {}
+.projects__slaids {
+}
 
-.swiper-wrapper {}
+.swiper-wrapper {
+}
 
-.projects__slaid {}
+.projects__slaid {
+}

@@ -104,7 +104,6 @@
       slidesPerColumn: 2,
       // spaceBetween: 50,
       breakpoints: {
-
         1200: {
           slidesPerView: 3,
           slidesPerColumn: 2,
@@ -129,9 +128,7 @@
           slidesPerView: 1,
           slidesPerColumn: 1
         }
-
       },
-      // slidesPerColumnFill: 'row',
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
@@ -139,10 +136,9 @@
       a11y: {
         prevSlideMessage: 'Предыдущий слайд',
         nextSlideMessage: 'Следующий слайд'
-        // paginationBulletMessage: 'Перейти к слайду {{index}}',
       },
       pagination: {
-        el: '.gallery-slider-pagination',
+        el: '.slider__pagination',
         clickable: true,
         type: 'fraction'
         // renderFraction: function (currentClass, totalClass) {
@@ -151,12 +147,48 @@
       }
     });
 
-    // tooltip - партнеры
-    const myTooltip = new Tooltip({
-      selector: '.projects__tooltip_one',
-      tooltipClass: 'projects__tooltip',
-      margin: 10,
-      position: 'top-center',
+    // слайдер издания
+    const swiperEdition = new Swiper('.edition__slider', {
+      slidesPerView: 3,
+      spaceBetween: 50,
+      breakpoints: {
+
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 50
+        },
+        1000: {
+          slidesPerView: 2,
+          spaceBetween: 40
+        },
+        900: {
+          slidesPerView: 3,
+          spaceBetween: 50
+        },
+        500: {
+          slidesPerView: 2,
+          spaceBetween: 30
+        },
+        320: {
+          slidesPerView: 1
+        }
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      a11y: {
+        prevSlideMessage: 'Предыдущий слайд',
+        nextSlideMessage: 'Следующий слайд'
+      },
+      pagination: {
+        el: '.slider__pagination',
+        clickable: true,
+        type: 'fraction'
+        // renderFraction: function (currentClass, totalClass) {
+        //   return '<span class="' + className + '">' + (index + 1) + '</span> >';
+        // },
+      }
     });
 
 
