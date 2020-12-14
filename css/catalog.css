@@ -1,6 +1,8 @@
 .catalog {
-  /* временный отступ */
+  /* временный отступ 1920*/
   margin-bottom: 426px;
+  /* временный отступ 1024
+  margin-bottom: 523px;*/
 }
 
 .catalog__head {

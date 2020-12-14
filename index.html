@@ -19,13 +19,15 @@
   <link rel="stylesheet" href="./css/developments.css">
   <link rel="stylesheet" href="./css/edition.css">
   <link rel="stylesheet" href="./css/projects.css">
-
-
+  <link rel="stylesheet" href="./css/contacts.css">
   <link rel="stylesheet" href="./css/footer.css">
   <link rel="stylesheet" href="./css/media.css">
 
   <title>Blanchard - художественная галерея</title>
 
+  <script defer src="https://api-maps.yandex.ru/2.1/?apikey=d662fa1d-281e-4aeb-9205-4071c2163bb8&lang=ru_RU"
+    type="text/javascript">
+    </script>
   <script defer src="js/swiper-bundle.min.js"></script>
   <script defer src="js/choices.min.js"></script>
   <script defer src="js/simplebar.min.js"></script>
@@ -69,7 +71,7 @@
         </button>
         <div class="logo">
           <a class="logo__link" href="#" tabindex="1">
-            <img class="logo__img" src="./img/hero/logo.svg" alt="Логотип компании Евклид-проектные системы">
+            <img class="logo__img" src="./img/hero/logo.svg" alt="Логотип компании Blanchard">
           </a>
         </div>
         <div class="burger__menu js-burger__menu">
@@ -588,13 +590,15 @@
             <span class="checkbox__marker"></span>
             Журналы и газеты
           </label>
-          <h3 class="checkbox__head checkbox__head_price header__h3">Цена</h3>
           <div class="checkbox__price">
-            <label class="price__label" for="price-from">От</label>
-            <input class="price__input" type="text" id="price-from" name="price-from" placeholder="50">
-            <label class="price__label" for="price-to">до</label>
-            <input class="price__input" type="text" id="price-to" name="price-to" placeholder="25 000">
-            <span class="price__label">рублей</span>
+            <h3 class="checkbox__head checkbox__head_price header__h3">Цена</h3>
+            <div class="price__body">
+              <label class="price__label" for="price-from">От</label>
+              <input class="price__input" type="text" id="price-from" name="price-from" placeholder="50">
+              <label class="price__label" for="price-to">до</label>
+              <input class="price__input" type="text" id="price-to" name="price-to" placeholder="25 000">
+              <span class="price__label">рублей</span>
+            </div>
           </div>
         </form>
         <div class="edition__slider swiper-container">
@@ -728,51 +732,92 @@
         </div>
         <ul class="projects__slaids swiper-wrapper">
           <li class="swiper-slide projects__slaid">
-            <a href="#">
-              <img src="./img/projects/01-project-partners.png" alt="Логотип компаниии партнера">
+            <a class="projects__slaids-link" href="#">
+              <img class="projects__slaids-img" src="./img/projects/01-project-partners.png"
+                alt="Логотип компаниии партнера">
             </a>
           </li>
           <li class="swiper-slide projects__slaid">
-            <a href="#">
-              <img src="./img/projects/02-project-partners.png" alt="Логотип компаниии партнера">
+            <a class="projects__slaids-link" href="#">
+              <img class="projects__slaids-img" src="./img/projects/02-project-partners.png"
+                alt="Логотип компаниии партнера">
             </a>
           </li>
           <li class="swiper-slide projects__slaid">
-            <a href="#">
-              <img src="./img/projects/03-project-partners.png" alt="Логотип компаниии партнера">
+            <a class="projects__slaids-link" href="#">
+              <img class="projects__slaids-img" src="./img/projects/03-project-partners.png"
+                alt="Логотип компаниии партнера">
             </a>
           </li>
           <li class="swiper-slide projects__slaid">
-            <a href="#">
-              <img src="./img/projects/04-project-partners.png" alt="Логотип компаниии партнера">
+            <a class="projects__slaids-link" href="#">
+              <img class="projects__slaids-img" src="./img/projects/04-project-partners.png"
+                alt="Логотип компаниии партнера">
             </a>
           </li>
           <li class="swiper-slide projects__slaid">
-            <a href="#">
-              <img src="./img/projects/05-project-partners.png" alt="Логотип компаниии партнера">
+            <a class="projects__slaids-link" href="#">
+              <img class="projects__slaids-img" src="./img/projects/05-project-partners.png"
+                alt="Логотип компаниии партнера">
             </a>
           </li>
           <li class="swiper-slide projects__slaid">
-            <a href="#">
-              <img src="./img/projects/06-project-partners.png" alt="Логотип компаниии партнера">
+            <a class="projects__slaids-link" href="#">
+              <img class="projects__slaids-img" src="./img/projects/06-project-partners.png"
+                alt="Логотип компаниии партнера">
             </a>
           </li>
           <li class="swiper-slide projects__slaid">
-            <a href="#">
-              <img src="./img/projects/07-project-partners.png" alt="Логотип компаниии партнера">
+            <a class="projects__slaids-link" href="#">
+              <img class="projects__slaids-img" src="./img/projects/07-project-partners.png"
+                alt="Логотип компаниии партнера">
             </a>
           </li>
           <li class="swiper-slide projects__slaid">
-            <a href="#">
-              <img src="./img/projects/08-project-partners.png" alt="Логотип компаниии партнера">
+            <a class="projects__slaids-link" href="#">
+              <img class="projects__slaids-img" src="./img/projects/08-project-partners.png"
+                alt="Логотип компаниии партнера">
             </a>
           </li>
           <li class="swiper-slide projects__slaid">
-            <a href="#">
-              <img src="./img/projects/09-project-partners.png" alt="Логотип компаниии партнера">
+            <a class="projects__slaids-link" href="#">
+              <img class="projects__slaids-img" src="./img/projects/09-project-partners.png"
+                alt="Логотип компаниии партнера">
             </a>
           </li>
         </ul>
+      </div>
+    </section>
+    <section class="contacts">
+      <h2 class="header__h2 header__h2_contacts container">Контакты</h2>
+      <div class="contacts__body">
+        <div class="contacts__colum-left contacts__colum-left_address">
+          <h3 class="header__h3 header__h3_contacts">Шоурум №4</h3>
+          <p>Леонтьевский переулок, дом 5, строение 1</p>
+        </div>
+        <div class="contacts__colum-left contacts__colum-left_form">
+          <form action="" autocomplete="on" method="POST" class="form" id="contacts__form">
+            <h3 class="header__h3 header__h3_form">Заказать обратный звонок</h3>
+            <label class="visually-hidden" for="name">Как вас зовут?</label>
+            <input class="request__input btn" required type="text" name="name" placeholder="Имя*">
+            <label class="visually-hidden" for="phone">Укажите ваш телефон</label>
+            <input class="request__input btn" required type="tel" name="phone" placeholder="Телефон*">
+            <button type="submit" class="request__btn btn">Заказать</button>
+            <h3 class="header__h3 header__h3_">Связаться в один клик</h3>
+            <ul class="form__links">
+              <li class="links__item">
+                <a class="links__link links__link_whatsapp" href="http://"></a>
+              </li>
+              <li class="links__item">
+                <a class="links__link links__link_telegram" href="http://"></a>
+              </li>
+            </ul>
+          </form>
+        </div>
+        <div class="contacts__map">
+          <div id="custom__map" class="map__body">
+          </div>
+        </div>
       </div>
     </section>
 
@@ -817,7 +862,6 @@
               fill="#CACACA" />
           </svg>
         </a>
-
       </div>
     </div>
 

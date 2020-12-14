@@ -5,6 +5,7 @@
 }
 
 .container_edition {
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding-bottom: 80px;
@@ -20,7 +21,7 @@
   flex-direction: column;
   align-self: flex-start;
   width: 340px;
-  margin-right: 50px;
+  margin-right: 108px;
   /* padding: 20px 30px 30px; */
 }
 
@@ -55,9 +56,8 @@
 .checkbox:checked + .checkbox__marker::after {
   position: absolute;
   content: "";
-  top: 50%;
-  transform: translateY(-50%) translateX(-50%);
-  /* left: 3px; */
+  top: 3px;
+  left: 3px;
   width: 5px;
   height: 5px;
   background-color: #fff;
@@ -73,7 +73,7 @@
   margin-bottom: 10px;
 }
 
-.checkbox__price {
+.price__body {
   display: flex;
   justify-content: space-between;
   width: 341px;
@@ -93,12 +93,14 @@
 
 .edition__slider {
   position: relative;
+  margin-top: -45px;
 }
 .swiper-container {
 }
 .slider__navigation_edition {
   position: absolute;
-  top: -200px;
+  top: -28px;
+  margin-top: 28px;
 }
 .swiper-button-prev {
 }
@@ -107,28 +109,53 @@
 .swiper-button-next {
 }
 .edition__slides {
+  padding-top: 57px;
 }
 .swiper-wrapper {
 }
 .edition-card {
 }
 .edition-card__img {
+  margin-bottom: 24px;
+  width: 99%;
+  height: 100%;
+  object-fit: cover;
 }
 .edition-card__body {
+  position: relative;
   display: flex;
   justify-content: space-between;
   font-size: 1.6rem;
+  line-height: 1.3;
+  letter-spacing: 0.3px;
+  margin-bottom: 16px;
+  height: 4.2rem;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .edition-card__text {
+  position: relative;
+  width: 65%;
+  overflow: hidden;
 }
 .edition-card__header {
   display: block;
   font-size: 1.6rem;
   color: var(--fonts-secondary-color);
 }
+/* .edition-card__text::after,
+.edition-card__header::after {
+  position: absolute;
+  content: "...";
+  top: 0;
+  right: 0px;
+  /* left: 0; */
+  font-size: 1.6rem;
+  color: var(--fonts-secondary-color);
+} */
 .edition-card__price {
   font-style: italic;
 }
 .edition-card__btn {
-  padding: 10px 20px;
+  padding: 9px 25px;
 }

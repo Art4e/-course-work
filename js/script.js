@@ -99,12 +99,8 @@
 
     // слайдер галерея
     const swiperGallery = new Swiper('.gallery-slider', {
-      // loop: true,
-      // slidesPerView: 3,
-      slidesPerColumn: 2,
-      // spaceBetween: 50,
       breakpoints: {
-        1200: {
+        1600: {
           slidesPerView: 3,
           slidesPerColumn: 2,
           spaceBetween: 50
@@ -149,21 +145,19 @@
 
     // слайдер издания
     const swiperEdition = new Swiper('.edition__slider', {
-      slidesPerView: 3,
-      spaceBetween: 50,
       breakpoints: {
 
-        1200: {
+        1500: {
           slidesPerView: 3,
-          spaceBetween: 50
+          spaceBetween: 43
         },
         1000: {
           slidesPerView: 2,
           spaceBetween: 40
         },
         900: {
-          slidesPerView: 3,
-          spaceBetween: 50
+          slidesPerView: 3
+          // spaceBetween: 50
         },
         500: {
           slidesPerView: 2,
@@ -254,5 +248,27 @@
     });
 
   });
+
+  // Яндекс карта
+  ymaps.ready(init);
+  function init() {
+    let myMap = new ymaps.Map("custom__map", {
+      center: [55.7584, 37.6010],
+      zoom: 15,
+      controls: [],
+    });
+
+    let myGeoObject = new ymaps.Placemark([55.758463, 37.601079], {
+
+    }, {
+      iconLayout: 'default#image',
+      iconImageHref: './img/contacts/marker.svg',
+      iconImageSize: [20, 20],
+      iconImageOffset: [-14, -40]
+    });
+
+    // Размещение геообъекта на карте.
+    myMap.geoObjects.add(myGeoObject);
+  };
 
 })();
