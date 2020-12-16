@@ -32,11 +32,26 @@
       const burgerMenuEl = document.querySelector('.js-burger__menu');
       const comeInEl = document.querySelector('.js-come-in');
 
-      bodyEl.classList.toggle('body_lock');
+      // bodyEl.classList.toggle('body_lock');
       burgerEl.classList.toggle('header__burger-activ');
       burgerMenuEl.classList.toggle('burger__menu_activ');
       comeInEl.classList.toggle('btn');
     });
+
+
+    ; (() => {
+      // Отслеживаем выбор страны художника
+      const сountrySelectEl = document.querySelector('.jsCountrySelect');
+
+      сountrySelectEl.children.forEach(el => {
+        el.addEventListener('click', () => {
+          сountrySelectEl.children.forEach(element => {
+            if (el !== element) element.classList.remove('activ');
+          });
+          el.classList.toggle('activ');
+        });
+      });
+    })();
 
     // отслеживаем размеры окна
     ; (() => {
@@ -86,13 +101,19 @@
 
     ; (() => {
       const buttonEl = document.querySelector('.js-event-card__btn');
+      const developmentsEl = document.querySelectorAll('.developments__event-card');
+
+      developmentsEl.forEach(el => {
+        if (el.offsetTop !== developmentsEl[0].offsetTop) {
+          el.classList.add('deactivated');
+        };
+      });
+
       const deactivatedEl = document.querySelectorAll('.deactivated');
 
       buttonEl.addEventListener('click', () => {
-
         deactivatedEl.forEach(el => {
-          console.log(el.classList);
-          el.classList.toggle('deactivated')
+          el.classList.toggle('deactivated');
         });
       });
     })();
@@ -102,65 +123,26 @@
       breakpoints: {
         1600: {
           slidesPerView: 3,
+          slidesPerGroup: 3,
           slidesPerColumn: 2,
           spaceBetween: 50
         },
-        1000: {
+        1001: {
           slidesPerView: 2,
+          slidesPerGroup: 2,
           slidesPerColumn: 2,
           spaceBetween: 40
         },
-        900: {
+        800: {
           slidesPerView: 3,
+          slidesPerGroup: 3,
           slidesPerColumn: 2,
           spaceBetween: 50
         },
-        500: {
+        651: {
           slidesPerView: 2,
+          slidesPerGroup: 2,
           slidesPerColumn: 2,
-          spaceBetween: 30
-        },
-        320: {
-          slidesPerView: 1,
-          slidesPerColumn: 1
-        }
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      },
-      a11y: {
-        prevSlideMessage: 'Предыдущий слайд',
-        nextSlideMessage: 'Следующий слайд'
-      },
-      pagination: {
-        el: '.slider__pagination',
-        clickable: true,
-        type: 'fraction'
-        // renderFraction: function (currentClass, totalClass) {
-        //   return '<span class="' + className + '">' + (index + 1) + '</span> >';
-        // },
-      }
-    });
-
-    // слайдер издания
-    const swiperEdition = new Swiper('.edition__slider', {
-      breakpoints: {
-
-        1500: {
-          slidesPerView: 3,
-          spaceBetween: 43
-        },
-        1000: {
-          slidesPerView: 2,
-          spaceBetween: 40
-        },
-        900: {
-          slidesPerView: 3
-          // spaceBetween: 50
-        },
-        500: {
-          slidesPerView: 2,
           spaceBetween: 30
         },
         320: {
@@ -179,9 +161,46 @@
         el: '.slider__pagination',
         clickable: true,
         type: 'fraction'
-        // renderFraction: function (currentClass, totalClass) {
-        //   return '<span class="' + className + '">' + (index + 1) + '</span> >';
-        // },
+      }
+    });
+
+    // слайдер издания
+    const swiperEdition = new Swiper('.edition__slider', {
+      breakpoints: {
+
+        1201: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+          spaceBetween: 43
+        },
+        1000: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 40
+        },
+        500: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 34
+        },
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          spaceBetween: 0
+        }
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      a11y: {
+        prevSlideMessage: 'Предыдущий слайд',
+        nextSlideMessage: 'Следующий слайд'
+      },
+      pagination: {
+        el: '.slider__pagination',
+        clickable: true,
+        type: 'fraction'
       }
     });
 
@@ -191,34 +210,31 @@
       breakpoints: {
         1200: {
           slidesPerView: 3,
+          slidesPerGroup: 3,
           spaceBetween: 50
         },
         1000: {
           slidesPerView: 2,
-          spaceBetween: 40
-        },
-        900: {
-          slidesPerView: 3,
-          spaceBetween: 50
+          slidesPerGroup: 2,
+          spaceBetween: 46
         },
         500: {
           slidesPerView: 2,
+          slidesPerGroup: 2,
           spaceBetween: 30
         },
         320: {
-          slidesPerView: 1,
-          slidesPerColumn: 1
-        }
-
+          slidesPerView: 1
+        },
       },
       navigation: {
-        nextEl: '.projects-slaider-next',
-        prevEl: '.projects-slaider-prev'
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
       },
       a11y: {
         prevSlideMessage: 'Предыдущий слайд',
         nextSlideMessage: 'Следующий слайд'
-      },
+      }
     });
 
     // выбор элементов select, применение к ним Choices
@@ -264,7 +280,7 @@
       iconLayout: 'default#image',
       iconImageHref: './img/contacts/marker.svg',
       iconImageSize: [20, 20],
-      iconImageOffset: [-14, -40]
+      iconImageOffset: [-10, -10]
     });
 
     // Размещение геообъекта на карте.

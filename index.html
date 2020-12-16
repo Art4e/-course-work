@@ -108,16 +108,19 @@
             </svg>
             <span>Войти</span>
           </div>
+          <ul class="container__news-feed">
+            <li class="news-feed__item"></li>
+            <li class="news-feed__item"></li>
+            <li class="news-feed__item"></li>
+            <li class="news-feed__item"></li>
+          </ul>
         </div>
-        <!-- <div class="search__container js-search__container" aria-label="Поиск по сайту">
-
-        </div> -->
       </div>
     </div>
     <div class="down-up__container">
       <div class="container head-down js-head-down">
         <ul class="head-down__menu">
-          <li class="head-down__menu-item realism" tabindex="0">
+          <li class="head-down__menu-item link-interaction realism" tabindex="0">
             <span class="menu-item__head link-interaction">
               Реализм
             </span>
@@ -130,7 +133,7 @@
               </ul>
             </div>
           </li>
-          <li class="head-down__menu-item impressionism" tabindex="0">
+          <li class="head-down__menu-item link-interaction impressionism" tabindex="0">
             <span class="menu-item__head link-interaction">
               Импрессионизм
             </span>
@@ -143,7 +146,7 @@
               </ul>
             </div>
           </li>
-          <li class="head-down__menu-item post-impressionism" tabindex="0">
+          <li class="head-down__menu-item link-interaction post-impressionism" tabindex="0">
             <span class="menu-item__head link-interaction">
               Постимпрессионизм
             </span>
@@ -156,7 +159,7 @@
               </ul>
             </div>
           </li>
-          <li class="head-down__menu-item vanguard" tabindex="0">
+          <li class="head-down__menu-item link-interaction vanguard" tabindex="0">
             <span class="menu-item__head link-interaction">
               Авангард
             </span>
@@ -169,7 +172,7 @@
               </ul>
             </div>
           </li>
-          <li class="head-down__menu-item futurism" tabindex="0">
+          <li class="head-down__menu-item link-interaction futurism" tabindex="0">
             <span class="menu-item__head link-interaction">
               Футуризм
             </span>
@@ -226,70 +229,118 @@
       </p>
     </section>
     <section class="gallery section">
-      <div class="gallery__body container">
-        <div class="colum-left">
-          <h2 class="gallery__header header__h2" id="gallery">
-            Галерея
-          </h2>
-          <div class="gallery-body">
-            <div class="filter">
-              <p class="filter__header">Фильтровать по:</p>
-              <select name="select" class="menu-item__authors">
-                <option value="Автор 1">Автор 1</option>
-                <option value="Автор 2">Автор 2</option>
-                <option value="Автор 3">Автор 3</option>
-              </select>
-              <select name="select" class="filter__direction">
-                <option value="Направление 1">Направление 1</option>
-                <option value="Направление 2">Направление 2</option>
-                <option value="Направление 3">Направление 3</option>
-              </select>
-              <select name="select" class="filter__technics">
-                <option value="Техника 1">Техника 1</option>
-                <option value="Техника 2">Техника 2</option>
-                <option value="Техника 3">Техника 3</option>
-              </select>
+      <div class="gallery__container container">
+        <!-- <div class="colum-left"> -->
+        <h2 class="gallery__header header__h2" id="gallery">
+          Галерея
+        </h2>
+        <div class="gallery__body">
+          <div class="bod__filter gallery__colum-left">
+            <p class="filter__header">Фильтровать по:</p>
+            <select name="select" class="filter__select">
+              <option class="filter__option" value="Автор 1">Автор 1</option>
+              <option class="filter__option" value="Автор 2">Автор 2</option>
+              <option class="filter__option" value="Автор 3">Автор 3</option>
+            </select>
+            <select name="select" class="filter__select">
+              <option class="filter__option" value="Направление 1">Направление 1</option>
+              <option class="filter__option" value="Направление 2">Направление 2</option>
+              <option class="filter__option" value="Направление 3">Направление 3</option>
+            </select>
+            <select name="select" class="filter__select">
+              <option class="filter__option" value="Техника 1">Техника 1</option>
+              <option class="filter__option" value="Техника 2">Техника 2</option>
+              <option class="filter__option" value="Техника 3">Техника 3</option>
+            </select>
+          </div>
+          <p class="bod__text gallery__colum-left">
+            Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
+            <a class="colum-left__link link-interaction" href="#">авторизуйтесь</a>, либо
+            воспользуйтесь лицензией.
+          </p>
+          <div class="gallery-slider swiper-container gallery__colum-right">
+            <div class="slider__navigation slider__navigation_gallery">
+              <div class="swiper-button-prev"></div>
+              <div class="slider__pagination slider__pagination_gallery"></div>
+              <div class="swiper-button-next"></div>
             </div>
-            <p class="colum-left__text">
-              Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
-              <a class="colum-left__link link-interaction" href="#">авторизуйтесь</a>, либо
-              воспользуйтесь лицензией.
-            </p>
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide gallery__item">
+                <img class="gallery-slider__img" src="./img/gallery/gallery-01.jpg" alt="Репрадукция картины">
+              </li>
+              <li class="swiper-slide gallery__item">
+                <img class="gallery-slider__img" src="./img/gallery/gallery-02.jpg" alt="Репрадукция картины">
+              </li>
+              <li class="swiper-slide gallery__item">
+                <img class="gallery-slider__img" src="./img/gallery/gallery-03.jpg" alt="Репрадукция картины">
+              </li>
+              <li class="swiper-slide gallery__item">
+                <img class="gallery-slider__img" src="./img/gallery/gallery-04.jpg" alt="Репрадукция картины">
+              </li>
+              <li class="swiper-slide gallery__item">
+                <img class="gallery-slider__img" src="./img/gallery/gallery-05.jpg" alt="Репрадукция картины">
+              </li>
+              <li class="swiper-slide gallery__item">
+                <img class="gallery-slider__img" src="./img/gallery/gallery-06.jpg" alt="Репрадукция картины">
+              </li>
+              <li class="swiper-slide gallery__item">
+                <img class="gallery-slider__img" src="./img/gallery/gallery-07.jpg" alt="Репрадукция картины">
+              </li>
+              <li class="swiper-slide gallery__item">
+                <img class="gallery-slider__img" src="./img/gallery/gallery-08.jpg" alt="Репрадукция картины">
+              </li>
+              <li class="swiper-slide gallery__item">
+                <img class="gallery-slider__img" src="./img/gallery/gallery-09.jpg" alt="Репрадукция картины">
+              </li>
+              <li class="swiper-slide gallery__item">
+                <img class="gallery-slider__img" src="./img/gallery/gallery-10.jpg" alt="Репрадукция картины">
+              </li>
+              <li class="swiper-slide gallery__item">
+                <img class="gallery-slider__img" src="./img/gallery/gallery-11.jpg" alt="Репрадукция картины">
+              </li>
+              <li class="swiper-slide gallery__item">
+                <img class="gallery-slider__img" src="./img/gallery/gallery-12.jpg" alt="Репрадукция картины">
+              </li>
+              <li class="swiper-slide gallery__item">
+                <img class="gallery-slider__img" src="./img/gallery/gallery-13.jpg" alt="Репрадукция картины">
+              </li>
+              <li class="swiper-slide gallery__item">
+                <img class="gallery-slider__img" src="./img/gallery/gallery-14.jpg" alt="Репрадукция картины">
+              </li>
+              <li class="swiper-slide gallery__item">
+                <img class="gallery-slider__img" src="./img/gallery/gallery-15.jpg" alt="Репрадукция картины">
+              </li>
+              <li class="swiper-slide gallery__item">
+                <img class="gallery-slider__img" src="./img/gallery/gallery-16.jpg" alt="Репрадукция картины">
+              </li>
+              <li class="swiper-slide gallery__item">
+                <img class="gallery-slider__img" src="./img/gallery/gallery-17.jpg" alt="Репрадукция картины">
+              </li>
+              <li class="swiper-slide gallery__item">
+                <img class="gallery-slider__img" src="./img/gallery/gallery-18.jpg" alt="Репрадукция картины">
+              </li>
+              <li class="swiper-slide gallery__item">
+                <img class="gallery-slider__img" src="./img/gallery/gallery-19.jpg" alt="Репрадукция картины">
+              </li>
+              <li class="swiper-slide gallery__item">
+                <img class="gallery-slider__img" src="./img/gallery/gallery-20.jpg" alt="Репрадукция картины">
+              </li>
+              <li class="swiper-slide gallery__item">
+                <img class="gallery-slider__img" src="./img/gallery/gallery-21.jpg" alt="Репрадукция картины">
+              </li>
+              <li class="swiper-slide gallery__item">
+                <img class="gallery-slider__img" src="./img/gallery/gallery-22.jpg" alt="Репрадукция картины">
+              </li>
+              <li class="swiper-slide gallery__item">
+                <img class="gallery-slider__img" src="./img/gallery/gallery-23.jpg" alt="Репрадукция картины">
+              </li>
+              <li class="swiper-slide gallery__item">
+                <img class="gallery-slider__img" src="./img/gallery/gallery-24.jpg" alt="Репрадукция картины">
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="gallery-slider swiper-container">
-          <div class="slider__navigation slider__navigation_gallery">
-            <div class="swiper-button-prev"></div>
-            <div class="slider__pagination slider__pagination_gallery"></div>
-            <div class="swiper-button-next"></div>
-          </div>
-          <div class="swiper-wrapper">
-            <img class="swiper-slide gallery-slider__img" src="./img/gallery/gallery-01.jpg" alt="Репрадукция картины">
-            <img class="swiper-slide gallery-slider__img" src="./img/gallery/gallery-02.jpg" alt="Репрадукция картины">
-            <img class="swiper-slide gallery-slider__img" src="./img/gallery/gallery-03.jpg" alt="Репрадукция картины">
-            <img class="swiper-slide gallery-slider__img" src="./img/gallery/gallery-04.jpg" alt="Репрадукция картины">
-            <img class="swiper-slide gallery-slider__img" src="./img/gallery/gallery-05.jpg" alt="Репрадукция картины">
-            <img class="swiper-slide gallery-slider__img" src="./img/gallery/gallery-06.jpg" alt="Репрадукция картины">
-            <img class="swiper-slide gallery-slider__img" src="./img/gallery/gallery-07.jpg" alt="Репрадукция картины">
-            <img class="swiper-slide gallery-slider__img" src="./img/gallery/gallery-08.jpg" alt="Репрадукция картины">
-            <img class="swiper-slide gallery-slider__img" src="./img/gallery/gallery-09.jpg" alt="Репрадукция картины">
-            <img class="swiper-slide gallery-slider__img" src="./img/gallery/gallery-10.jpg" alt="Репрадукция картины">
-            <img class="swiper-slide gallery-slider__img" src="./img/gallery/gallery-11.jpg" alt="Репрадукция картины">
-            <img class="swiper-slide gallery-slider__img" src="./img/gallery/gallery-12.jpg" alt="Репрадукция картины">
-            <img class="swiper-slide gallery-slider__img" src="./img/gallery/gallery-13.jpg" alt="Репрадукция картины">
-            <img class="swiper-slide gallery-slider__img" src="./img/gallery/gallery-14.jpg" alt="Репрадукция картины">
-            <img class="swiper-slide gallery-slider__img" src="./img/gallery/gallery-15.jpg" alt="Репрадукция картины">
-            <img class="swiper-slide gallery-slider__img" src="./img/gallery/gallery-16.jpg" alt="Репрадукция картины">
-            <img class="swiper-slide gallery-slider__img" src="./img/gallery/gallery-17.jpg" alt="Репрадукция картины">
-            <img class="swiper-slide gallery-slider__img" src="./img/gallery/gallery-18.jpg" alt="Репрадукция картины">
-            <img class="swiper-slide gallery-slider__img" src="./img/gallery/gallery-19.jpg" alt="Репрадукция картины">
-            <img class="swiper-slide gallery-slider__img" src="./img/gallery/gallery-20.jpg" alt="Репрадукция картины">
-            <img class="swiper-slide gallery-slider__img" src="./img/gallery/gallery-21.jpg" alt="Репрадукция картины">
-            <img class="swiper-slide gallery-slider__img" src="./img/gallery/gallery-22.jpg" alt="Репрадукция картины">
-            <img class="swiper-slide gallery-slider__img" src="./img/gallery/gallery-23.jpg" alt="Репрадукция картины">
-            <img class="swiper-slide gallery-slider__img" src="./img/gallery/gallery-24.jpg" alt="Репрадукция картины">
-          </div>
-        </div>
+        <!-- </div> -->
       </div>
     </section>
     <section class="container catalog section">
@@ -297,12 +348,12 @@
         <h2 class="catalog__header header__h2" id="catalog">
           Каталог
         </h2>
-        <div class="country__select">
-          <button class="select__buttom select__buttom_FR"></button>
-          <button class="select__buttom select__buttom_DE"></button>
-          <button class="select__buttom select__buttom_IT"></button>
-          <button class="select__buttom select__buttom_RU jsActiveTab"></button>
-          <button class="select__buttom select__buttom_BEL"></button>
+        <div class="country__select jsCountrySelect">
+          <button class="select__buttom select__buttom_FR" tabindex="0"></button>
+          <button class="select__buttom select__buttom_DE" tabindex="0"></button>
+          <button class="select__buttom select__buttom_IT" tabindex="0"></button>
+          <button class="select__buttom select__buttom_RU activ" tabindex="0"></button>
+          <button class="select__buttom select__buttom_BEL" tabindex="0"></button>
         </div>
       </div>
       <p class="catalog__head-text block__text">
@@ -371,7 +422,7 @@
             <li class="col-right__item">Бьяджо д’Антонио Туччи</li>
             <li class="col-right__item">Веккьетта</li>
             <li class="col-right__item">Андреа Верроккьо</li>
-            <li class="col-right__item">Доменико Гирландайо</li>
+            <li class="col-right__item jsActiveTab">Доменико Гирландайо</li>
             <li class="col-right__item">Беноццо Гоццоли</li>
             <li class="col-right__item">Граначчи, Франческо</li>
             <li class="col-right__item">Грегорио ди Чекко</li>
@@ -491,7 +542,7 @@
           </figure>
           <a class="event-card__link" href="#">Подробнее</a>
         </li>
-        <li class="developments__event-card deactivated">
+        <li class="developments__event-card">
           <figure class="event-card">
             <img class="event-card__img" src="./img/developments/4.jpg" alt="Разноцветная инсталяция">
             <figcaption class="event-card__body">
@@ -506,7 +557,7 @@
           </figure>
           <a class="event-card__link" href="#">Подробнее</a>
         </li>
-        <li class="developments__event-card deactivated">
+        <li class="developments__event-card">
           <figure class="event-card">
             <img class="event-card__img" src="./img/developments/5.jpg" alt="Зал Еврейского музея">
             <figcaption class="event-card__body">
@@ -524,83 +575,88 @@
       <button class="event-card__btn btn js-event-card__btn">Все события</button>
     </section>
     <section class="edition section">
-      <h2 class="edition__header header__h2 container" id="edition">
-        Издания
-      </h2>
+
       <div class="container container_edition">
-        <form class="form__checkbox">
+        <div class="edition__checkbox edition__colum-left">
+          <h2 class="edition__header header__h2" id="edition">
+            Издания
+          </h2>
           <h3 class="checkbox__head header__h3">Категории:</h3>
-          <label class="checkbox__label">
-            <input class="checkbox" type="checkbox" name="Best-sellers" value="Best-sellers">
-            <span class="checkbox__marker"></span>
-            Бестселлеры
-          </label>
-          <label class="checkbox__label">
-            <input class="checkbox" type="checkbox" name="Art" value="Art">
-            <span class="checkbox__marker"></span>
-            Искусство
-          </label>
-          <label class="checkbox__label">
-            <input class="checkbox" type="checkbox" name="Architecture" value="Architecture">
-            <span class="checkbox__marker"></span>
-            Архитектура
-          </label>
-          <label class="checkbox__label">
-            <input class="checkbox" type="checkbox" name="Design" value="Design">
-            <span class="checkbox__marker"></span>
-            Дизайн
-          </label>
-          <label class="checkbox__label">
-            <input class="checkbox" type="checkbox" name="Fashion" value="Fashion">
-            <span class="checkbox__marker"></span>
-            Мода
-          </label>
-          <label class="checkbox__label">
-            <input class="checkbox" type="checkbox" name="Children" value="Children">
-            <span class="checkbox__marker"></span>
-            Детям
-          </label>
-          <label class="checkbox__label">
-            <input class="checkbox" type="checkbox" name="Fiction" value="Fiction">
-            <span class="checkbox__marker"></span>
-            Художественная литература
-          </label>
-          <label class="checkbox__label">
-            <input class="checkbox" type="checkbox" name="Journalism" value="Journalism">
-            <span class="checkbox__marker"></span>
-            Публицистика
-          </label>
-          <label class="checkbox__label">
-            <input class="checkbox" type="checkbox" name="Travel guides" value="Travel guides">
-            <span class="checkbox__marker"></span>
-            Путеводители
-          </label>
-          <label class="checkbox__label">
-            <input class="checkbox" type="checkbox" name="Philosophy" value="Philosophy">
-            <span class="checkbox__marker"></span>
-            Философия
-          </label>
-          <label class="checkbox__label">
-            <input class="checkbox" type="checkbox" name="Educational literature" value="Educational literature">
-            <span class="checkbox__marker"></span>
-            Учебная литература
-          </label>
-          <label class="checkbox__label">
-            <input class="checkbox" type="checkbox" name="Magazines and newspapers" value="Magazines and newspapers">
-            <span class="checkbox__marker"></span>
-            Журналы и газеты
-          </label>
-          <div class="checkbox__price">
-            <h3 class="checkbox__head checkbox__head_price header__h3">Цена</h3>
-            <div class="price__body">
-              <label class="price__label" for="price-from">От</label>
-              <input class="price__input" type="text" id="price-from" name="price-from" placeholder="50">
-              <label class="price__label" for="price-to">до</label>
-              <input class="price__input" type="text" id="price-to" name="price-to" placeholder="25 000">
-              <span class="price__label">рублей</span>
-            </div>
+          <ul class="checkbox__body">
+            <li class="checkbox__item">
+              <input class="checkbox" type="checkbox" id="Best-sellers" name="Best-sellers" value="Best-sellers">
+              <label class="checkbox__label" for="Best-sellers" tabindex="0">Бестселлеры</label>
+              <span class="checkbox__marker"></span>
+            </li>
+            <li class="checkbox__item">
+              <input class="checkbox" type="checkbox" id="Art" name="Art" value="Art">
+              <span class="checkbox__marker"></span>
+              <label class="checkbox__label" tabindex="0" for="Art">Искусство</label>
+            </li>
+            <li class="checkbox__item">
+              <input class="checkbox" type="checkbox" id="Architecture" name="Architecture" value="Architecture">
+              <span class="checkbox__marker"></span>
+              <label class="checkbox__label" tabindex="0" for="Architecture">Архитектура</label>
+            </li>
+            <li class="checkbox__item">
+              <input class="checkbox" type="checkbox" id="Design" name="Design" value="Design">
+              <span class="checkbox__marker"></span>
+              <label class="checkbox__label" tabindex="0" for="Design">Дизайн</label>
+            </li>
+            <li class="checkbox__item">
+              <input class="checkbox" type="checkbox" id="Fashion" name="Fashion" value="Fashion">
+              <span class="checkbox__marker"></span>
+              <label class="checkbox__label" tabindex="0" for="Fashion">Мода</label>
+            </li>
+            <li class="checkbox__item">
+              <input class="checkbox" type="checkbox" id="Children" name="Children" value="Children">
+              <span class="checkbox__marker"></span>
+              <label class="checkbox__label" tabindex="0" for="Children">Детям</label>
+            </li>
+            <li class="checkbox__item">
+              <input class="checkbox" type="checkbox" id="Fiction" name="Fiction" value="Fiction">
+              <span class="checkbox__marker"></span>
+              <label class="checkbox__label" tabindex="0" for="Fiction">Художественная литература</label>
+            </li>
+            <li class="checkbox__item">
+              <input class="checkbox" type="checkbox" id="Journalism" name="Journalism" value="Journalism">
+              <span class="checkbox__marker"></span>
+              <label class="checkbox__label" tabindex="0" for="Journalism">Публицистика</label>
+            </li>
+            <li class="checkbox__item">
+              <input class="checkbox" type="checkbox" id="Travel" name="Travel guides" value="Travel guides">
+              <span class="checkbox__marker"></span>
+              <label class="checkbox__label" tabindex="0" for="Travel">Путеводители</label>
+            </li>
+            <li class="checkbox__item">
+              <input class="checkbox" type="checkbox" id="Philosophy" name="Philosophy" value="Philosophy">
+              <span class="checkbox__marker"></span>
+              <label class="checkbox__label" tabindex="0" for="Philosophy">Философия</label>
+            </li>
+            <li class="checkbox__item">
+              <input class="checkbox" type="checkbox" id="Educational" name="Educational literature"
+                value="Educational literature">
+              <span class="checkbox__marker"></span>
+              <label class="checkbox__label" tabindex="0" for="Educational">Учебная литература</label>
+            </li>
+            <li class="checkbox__item">
+              <input class="checkbox" type="checkbox" id="Magazines" name="Magazines and newspapers"
+                value="Magazines and newspapers">
+              <span class="checkbox__marker"></span>
+              <label class="checkbox__label" tabindex="0" for="Magazines">Журналы и газеты</label>
+            </li>
+          </ul>
+        </div>
+        <div class="edition__price edition__colum-left">
+          <h3 class="checkbox__head checkbox__head_price header__h3">Цена</h3>
+          <div class="price__body">
+            <label class="price__label" for="price-from">От</label>
+            <input class="price__input" type="text" id="price-from" name="price-from" placeholder="50">
+            <label class="price__label" for="price-to">до</label>
+            <input class="price__input" type="text" id="price-to" name="price-to" placeholder="25 000">
+            <span class="price__label">рублей</span>
           </div>
-        </form>
+        </div>
         <div class="edition__slider swiper-container">
           <div class="slider__navigation slider__navigation_edition">
             <div class="swiper-button-prev"></div>
@@ -721,7 +777,7 @@
         предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов
         призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до
         степени совершенной
-        неузнаваемости. Подробнее: <a href="#">blanchard-art.ru/projects/about</a>
+        неузнаваемости. Подробнее: <a class="projects__link" href="#">blanchard-art.ru/projects/about</a>
       </p>
       <h3 class="projects__header-h3 header__h3">Партнёры проектов:</h3>
 
@@ -796,20 +852,20 @@
           <p>Леонтьевский переулок, дом 5, строение 1</p>
         </div>
         <div class="contacts__colum-left contacts__colum-left_form">
-          <form action="" autocomplete="on" method="POST" class="form" id="contacts__form">
+          <form autocomplete="on" method="POST" class="form" id="contacts__form">
             <h3 class="header__h3 header__h3_form">Заказать обратный звонок</h3>
             <label class="visually-hidden" for="name">Как вас зовут?</label>
-            <input class="request__input btn" required type="text" name="name" placeholder="Имя*">
+            <input class="request__input btn" required type="text" id="name" name="name" placeholder="Имя*">
             <label class="visually-hidden" for="phone">Укажите ваш телефон</label>
-            <input class="request__input btn" required type="tel" name="phone" placeholder="Телефон*">
+            <input class="request__input btn" required type="tel" id="phone" name="phone" placeholder="Телефон*">
             <button type="submit" class="request__btn btn">Заказать</button>
             <h3 class="header__h3 header__h3_">Связаться в один клик</h3>
             <ul class="form__links">
               <li class="links__item">
-                <a class="links__link links__link_whatsapp" href="http://"></a>
+                <a class="links__link links__link_whatsapp" href="#"></a>
               </li>
               <li class="links__item">
-                <a class="links__link links__link_telegram" href="http://"></a>
+                <a class="links__link links__link_telegram" href="#"></a>
               </li>
             </ul>
           </form>

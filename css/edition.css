@@ -5,24 +5,26 @@
 }
 
 .container_edition {
-  position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 80px;
+  padding-bottom: 79px;
+  flex-wrap: wrap;
   min-width: 0;
+  height: 686px;
 }
 
 .edition__header {
   margin-bottom: 16px;
 }
+.edition__colum-left {
+  width: 25%;
+}
 
-.form__checkbox {
+.edition__checkbox {
   display: flex;
   flex-direction: column;
   align-self: flex-start;
-  width: 340px;
-  margin-right: 108px;
-  /* padding: 20px 30px 30px; */
 }
 
 .checkbox__head {
@@ -30,10 +32,17 @@
   font-weight: 700;
   color: var(--fonts-secondary-color);
 }
+.checkbox__body {
+  display: flex;
+  flex-direction: column;
+}
+.checkbox__item {
+  position: relative;
+}
 
 .checkbox__label {
-  position: relative;
-  padding: 0 0 0 24px;
+  /* position: relative;*/
+  padding-left: 24px;
   cursor: pointer;
   line-height: 2;
 }
@@ -53,7 +62,7 @@
   transform: translateY(-50%);
 }
 
-.checkbox:checked + .checkbox__marker::after {
+.checkbox:checked ~ .checkbox__marker::after {
   position: absolute;
   content: "";
   top: 3px;
@@ -63,9 +72,20 @@
   background-color: #fff;
   border-radius: 50%;
 }
-
+.checkbox__label:focus {
+  outline: var(--link-focus-outline);
+}
+.checkbox:hover ~ .checkbox__label {
+  color: var(--link-hover);
+}
+.checkbox:checked ~ .checkbox__marker {
+  border: 1px solid var(--link-hover);
+}
+.checkbox:checked ~ .checkbox__marker::after {
+  background-color: var(--link-hover);
+}
 .checkbox:checked ~ .checkbox__label {
-  /* outline: 3px solid blue; */
+  color: var(--link-hover);
 }
 
 .checkbox__head_price {
@@ -92,8 +112,10 @@
 }
 
 .edition__slider {
-  position: relative;
-  margin-top: -45px;
+  width: 72%;
+  margin-top: 39px;
+  margin-left: auto;
+  margin-right: -3px;
 }
 .swiper-container {
 }
@@ -116,7 +138,7 @@
 .edition-card {
 }
 .edition-card__img {
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   width: 99%;
   height: 100%;
   object-fit: cover;
@@ -149,7 +171,7 @@
   content: "...";
   top: 0;
   right: 0px;
-  /* left: 0; */
+  /* left: 0; 
   font-size: 1.6rem;
   color: var(--fonts-secondary-color);
 } */
