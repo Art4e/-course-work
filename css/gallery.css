@@ -3,11 +3,9 @@
   background: url("../img/gallery/gallery-background.jpg") 50% / cover no-repeat;
 }
 
-.gallery__body {
-  display: flex;
-  justify-content: space-between;
+.gallery__container {
   padding-top: 80px;
-  padding-bottom: 65px;
+  padding-bottom: 72px;
   color: var(--fonts-secondary-color);
 }
 
@@ -20,20 +18,22 @@
   flex: 0 0 449px;
 }
 
-.gallery-body {
+.gallery__body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
-  height: 100%;
-  padding-right: 50px;
-  padding-bottom: 90px;
+  height: 757px;
   letter-spacing: 0.3px;
 }
+.gallery__colum-left {
+  width: 25%;
+}
 
-.filter {
+.bod__filter {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .filter__header {
@@ -42,7 +42,7 @@
   font-weight: 600;
 }
 
-.filter > .choices {
+.bod__filter > .choices {
   display: flex;
   align-items: center;
   margin-bottom: 0;
@@ -52,7 +52,7 @@
   background-color: transparent;
 }
 
-.filter .choices__inner {
+.bod__filter.choices__inner {
   padding: 0px 16px 0px 12px;
   background-color: transparent;
   font-size: 1.6rem;
@@ -67,7 +67,8 @@
 .filter__technics {
 }
 
-.colum-left__text {
+.bod__text {
+  padding-right: 20px;
 }
 
 .colum-left__link {
@@ -75,11 +76,17 @@
 
 .link {
 }
+.gallery__colum-right {
+  max-width: 72%;
+}
 
 .gallery-slider.swiper-container {
-  max-width: 1150px;
-  height: 850px;
+  width: 100%;
+  height: calc(100% + 85px);
   min-width: 0;
+  margin-top: -85px;
+  margin-left: 0;
+  margin-right: -50px;
 }
 
 .gallery-slider.swiper-container > .swiper-wrapper {
@@ -90,6 +97,7 @@
   display: flex;
   width: 130px;
   margin-top: 25px;
+  margin-left: -4px;
   margin-bottom: 28px;
 }
 
@@ -126,12 +134,31 @@
   color: var(--fonts-secondary-color);
 }
 
-.swiper-slide.gallery-slider__img {
-  object-fit: cover;
-  width: 100%;
+.gallery__item {
   height: calc((100% - 50px) / 2);
 }
-
-/* p {
-  margin: 0;
-} */
+.gallery-slider__img {
+  position: relative;
+  cursor: pointer;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.gallery__item::after {
+  position: absolute;
+  content: "";
+  top: 14.3%;
+  right: 14.3%;
+  bottom: 14.3%;
+  left: 14.3%;
+  background: url("") 50% no-repeat;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color, background 0.3s ease-in-out;
+}
+.gallery__item:hover::after {
+  background: url("../img/gallery/icon-magnifier.svg") 50% no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.gallery__item:hover {
+  /* border: 2px solid #fff; */
+}
