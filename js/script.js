@@ -2,7 +2,7 @@
 
   document.addEventListener('DOMContentLoaded', () => {
 
-    const swiperHead = new Swiper('.header-slider', {
+    const swiperHead = new Swiper('.hero-slider', {
       speed: 1500,
       autoplay: {
         delay: 5000,
@@ -26,26 +26,68 @@
     });
 
     // Открываем, закрываем бургер меню
-    const burgerEl = document.querySelector('.js-header__burger');
-    burgerEl.addEventListener('click', () => {
+    const headUpEl = document.querySelector('.js-head-up');
+    headUpEl.addEventListener('click', (ev) => {
       const bodyEl = document.querySelector('body');
-      const burgerMenuEl = document.querySelector('.js-burger__menu');
-      const comeInEl = document.querySelector('.js-come-in');
+      const burgerEl = headUpEl.querySelector('.js-header__burger');
+      const burgerBodyEl = burgerEl.querySelector('span');
+      const burgerMenuEl = headUpEl.querySelector('.js-header__menu');
+      const comeInEl = headUpEl.querySelector('.js-come-in');
+      const menuLinksEl = headUpEl.querySelectorAll('a');
+      const toggleActivClass = () => {
+        burgerMenuEl.classList.toggle('activ');
+        comeInEl.classList.toggle('btn');
+        burgerEl.classList.toggle('activ');
+        bodyEl.classList.toggle('body_lock');
+      };
 
-      // bodyEl.classList.toggle('body_lock');
-      burgerEl.classList.toggle('header__burger-activ');
-      burgerMenuEl.classList.toggle('burger__menu_activ');
-      comeInEl.classList.toggle('btn');
+      menuLinksEl.forEach(el => { if (ev.target === el) toggleActivClass() });
+      if (ev.target == burgerEl || ev.target == burgerBodyEl) toggleActivClass();
     });
 
+    // Открываем нижнее меню
+    ; (() => {
+      const downMenuItemsEl = document.querySelectorAll('.js-head-down__menu > li');
+
+      downMenuItemsEl.forEach(el => {
+        el.onmouseover = (event) => el.classList.add('activ');
+        el.onmouseout = (event) => el.classList.remove('activ');
+        el.addEventListener('focus', () => el.classList.add('activ'));
+        el.addEventListener('blur', () => el.classList.remove('activ'));
+      });
+
+    })();
+
+    // Изменяем положение поиска на брекпоинте 1050
+    ; (() => {
+      const formSearchEl = document.querySelector('.js-header__search'),
+        inContainerSearchEl = document.querySelector('.js-head-up'),
+        outContainerSearchEl = document.querySelector('.js-head-down');
+      const SIZE_SCRIN = 1050;
+      const pageWidth = Math.max(
+        document.body.scrollWidth, document.documentElement.scrollWidth,
+        document.body.offsetWidth, document.documentElement.offsetWidth,
+        document.body.clientWidth, document.documentElement.clientWidth
+      );
+      const movingFormSearch = (e) => {
+        if (e.matches) {
+          inContainerSearchEl.append(formSearchEl);
+        } else {
+          outContainerSearchEl.append(formSearchEl);
+        };
+      };
+
+      if (pageWidth <= SIZE_SCRIN) inContainerSearchEl.append(formSearchEl);
+      window.matchMedia(`(max-width: ${SIZE_SCRIN}px)`).addListener(movingFormSearch);
+    })();
 
     ; (() => {
       // Отслеживаем выбор страны художника
-      const сountrySelectEl = document.querySelector('.jsCountrySelect');
+      const сountrySelectEl = document.querySelector('.js-country-select').children;
 
-      сountrySelectEl.children.forEach(el => {
+      сountrySelectEl.forEach(el => {
         el.addEventListener('click', () => {
-          сountrySelectEl.children.forEach(element => {
+          сountrySelectEl.forEach(element => {
             if (el !== element) element.classList.remove('activ');
           });
           el.classList.toggle('activ');
@@ -53,52 +95,7 @@
       });
     })();
 
-    // отслеживаем размеры окна
-    ; (() => {
-      const SIZE_SCRIN = 1050;
-      const pageWidth = Math.max(
-        document.body.scrollWidth, document.documentElement.scrollWidth,
-        document.body.offsetWidth, document.documentElement.offsetWidth,
-        document.body.clientWidth, document.documentElement.clientWidth
-      );
-      const formSearchEl = document.querySelector('.js-header__search');
-      const inContainerSearchEl = document.querySelector('.js-head-up')
-      // при загрузке сравниваем размер окна с нужным SIZE_SCRIN
-      // если равно или меньше добавляем поиск в верхнее меню
-      if (pageWidth <= SIZE_SCRIN) {
-        inContainerSearchEl.append(formSearchEl);
-      }
-      //отслеживаем прохождения медиазапроса с разрешением SIZE_SCRIN
-      // добавляем или удаляем поиск из верхнего меню
-      const mediaQueryList = window.matchMedia(`(max-width: ${SIZE_SCRIN}px)`);
-      function movingFormSearch(e) {
-        if (e.matches) {
-          inContainerSearchEl.append(formSearchEl);
-        } else {
-          formSearchEl.remove();
-        };
-      }
-
-      // обработка вида поиска при раскрытии на малых разрешениях
-      // const searchButtonEl = document.querySelector('.js-search__button');
-      formSearchEl.addEventListener('focus', () => {
-        console.log(formSearchEl);
-        console.log('фокус');
-        // const bodyEl = document.querySelector('body');
-        // burgerMenuEl.classList.toggle('burger__menu_activ');
-        // comeInEl.classList.toggle('btn');
-      });
-      formSearchEl.addEventListener('blur', () => {
-        console.log(formSearchEl);
-        console.log('фокус');
-        // const bodyEl = document.querySelector('body');
-        // burgerMenuEl.classList.toggle('burger__menu_activ');
-        // comeInEl.classList.toggle('btn');
-      });
-
-      mediaQueryList.addListener(movingFormSearch);
-    })();
-
+    // Отобразить или скыть карточки "Сообытия" после первой "линии событий"
     ; (() => {
       const buttonEl = document.querySelector('.js-event-card__btn');
       const developmentsEl = document.querySelectorAll('.developments__event-card');
@@ -252,16 +249,16 @@
     })();
 
     // Создаем аккардион
-
     crteatAccordion('.col-right__header');
-    crteatAccordion('.menu-item__head');
 
     // Изменяем скролл 
-    const elForScrolling = document.querySelectorAll('.menu-item__authors');
+    ; (() => {
+      const scrollingEl = document.querySelectorAll('.authors__items');
 
-    elForScrolling.forEach(el => {
-      new SimpleBar(el, { autoHide: false });
-    });
+      scrollingEl.forEach(el => {
+        new SimpleBar(el, { autoHide: false });
+      });
+    })();
 
   });
 

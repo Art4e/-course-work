@@ -1,10 +1,10 @@
 .catalog {
-  /* временный отступ 1920
-  margin-bottom: 426px;*/
+  /* временный отступ 1920*/
+  margin-bottom: 426px;
   /* временный отступ 1024
   margin-bottom: 523px;*/
-  /* временный отступ 768*/
-  margin-bottom: 73px;
+  /* временный отступ 768
+  margin-bottom: 73px;*/
 }
 
 .catalog__head {
@@ -176,18 +176,18 @@
   transform: rotate(225deg);
 }
 
-.col-right__header:hover .col-right__block,
-.col-right__header:focus .col-right__block,
-.col-right__header:active .col-right__block {
+.col-right__header:hover .col-right__items,
+.col-right__header:focus .col-right__items,
+.col-right__header:active .col-right__items {
 }
 
-.col-right__header.active + .col-right__block {
+.col-right__header.active + .col-right__items {
   display: block;
   border-top: 1px solid var(--main-highlight-color);
   border-bottom: 1px solid var(--main-highlight-color);
 }
 
-.col-right__block {
+.col-right__items {
   display: none;
   width: 100%;
   column-count: 3;
@@ -203,41 +203,19 @@
   user-select: none;
 }
 
-.col-right__item.jsActiveTab {
+/* .col-left__items,
+.col-left__item,
+.col-right__items,
+.col-right__item {
+  margin: 0;
+  padding: 0;
+} */
+
+.col-right__item.js-active-tab {
   font-weight: 600;
   color: var(--main-highlight-color);
 }
 
-/* .col-right__item:not(:last-child)::after {
-  content: ", ";
-} */
-.col-left__item {
-}
-
 .tab__Item {
   display: none;
-}
-
-.col-left__img {
-}
-
-.header__h3 {
-}
-
-.col-left__text {
-}
-
-.catalog__col-right {
-}
-
-.jsTabsMenu1 {
-}
-
-.col-right__header {
-}
-
-.col-right__block {
-}
-
-.col-right__item {
 }

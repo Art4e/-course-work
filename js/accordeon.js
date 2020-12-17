@@ -1,5 +1,5 @@
 ; (() => {
-    // const contAccordeonEl = document.querySelectorAll('.col-right__block');
+    // const contAccordeonEl = document.querySelectorAll('.col-right__items');
 
     // for (let i = 0; i < titleAccordeonEl.length; i++) {
     //     titleAccordeonEl[i].addEventListener('click', function() {

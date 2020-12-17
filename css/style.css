@@ -33,12 +33,7 @@
   --link-focus: #7943a4;
   --link-hover: #c283f3;
   --btn-border-radius: calc(100 / 2 * 1px);
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  border: 0;
+  --delay-animation: 0.3s ease-in-out;
 }
 
 *,
@@ -72,7 +67,6 @@ textarea {
 input:focus,
 button:focus,
 textarea:focus {
-  /* outline: 1px solid #fff; */
   outline: none;
 }
 
@@ -97,6 +91,12 @@ a:visited {
 
 ul li {
   list-style: none;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
 }
 
 img {
@@ -141,8 +141,14 @@ h3,
 h4,
 h5,
 h6 {
+  margin: 0;
+  padding: 0;
   font-weight: 400;
   color: var(--fonts-main-color);
+}
+p {
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -172,6 +178,9 @@ body {
   padding: 0 160px;
   margin: 0 auto;
 }
+.body {
+  margin: 0;
+}
 
 .section {
   margin-bottom: 80px;
@@ -189,12 +198,14 @@ body {
   color: var(--fonts-secondary-color);
 }
 
+.link-interaction {
+  transition: color var(--delay-animation), outline var(--delay-animation);
+}
 .link-interaction:focus {
   outline: var(--link-focus-outline);
   outline-offset: 2px;
   color: var(--link-focus);
 }
-
 .link-interaction:hover {
   color: var(--link-hover);
 }

@@ -10,8 +10,8 @@
 	window.requestAnimationFrame = requestAnimationFrame;
 
 	// получаем объект menu
-	const menu = document.querySelector('.jsHeaderMenu');
-	const items = menu.querySelectorAll('.jsClickScroll');
+	const menu = document.querySelector('.js-menu-items');
+	const items = menu.querySelectorAll('.js-click-scroll');
 	const containers = document.querySelectorAll('.header__h2');
 	const TOP_BORDER = 0;
 

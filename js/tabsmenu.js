@@ -7,9 +7,9 @@
 		let currIndex;
 
 		[].forEach.call(items, (item, index) => {
-			item.classList.remove('jsActiveTab');
+			item.classList.remove('js-active-tab');
 			if (item === tab) {
-				item.classList.add('jsActiveTab');
+				item.classList.add('js-active-tab');
 				currIndex = index;
 			}
 		});
@@ -40,6 +40,6 @@
 		});
 	};
 
-	creatTab('.jsTabsMenu', ".jsTabsContainer");
-	// creatTab('.jsTabsMenu1', ".jsTabsContainer1");
+	creatTab('.js-tabs-menu', ".js-tabs-container");
+	// creatTab('.js-tabs-menu1', ".js-tabs-container1");
 })();
