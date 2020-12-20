@@ -4,6 +4,7 @@
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
   font-family: "OpenSans";
   src: url("../fonts/OpenSans-Italic.woff2") format("woff2"), url("../fonts/OpenSans-Italic.woff") format("woff");
@@ -146,6 +147,7 @@ h6 {
   font-weight: 400;
   color: var(--fonts-main-color);
 }
+
 p {
   margin: 0;
   padding: 0;
@@ -178,6 +180,7 @@ body {
   padding: 0 160px;
   margin: 0 auto;
 }
+
 .body {
   margin: 0;
 }
@@ -186,7 +189,7 @@ body {
   margin-bottom: 80px;
 }
 
-.header__h2 {
+.header-h2 {
   font-size: 4.8rem;
   line-height: 6.5rem;
 }
@@ -201,11 +204,13 @@ body {
 .link-interaction {
   transition: color var(--delay-animation), outline var(--delay-animation);
 }
+
 .link-interaction:focus {
   outline: var(--link-focus-outline);
   outline-offset: 2px;
   color: var(--link-focus);
 }
+
 .link-interaction:hover {
   color: var(--link-hover);
 }

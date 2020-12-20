@@ -1,4 +1,4 @@
-.header__h2_contacts {
+.header-h2_contacts {
   margin-bottom: 17px;
 }
 
@@ -36,8 +36,7 @@
   letter-spacing: -0.5px;
 }
 
-.header__h3_contacts {
-}
+.header__h3_contacts {}
 
 .header__h3_form {
   margin-bottom: 8px;
@@ -98,6 +97,7 @@
 .ymaps-2-1-77-ground-pane {
   filter: grayscale(1);
 }
+
 .ymaps-2-1-77-copyrights-pane {
   display: none;
 }

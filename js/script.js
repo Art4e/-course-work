@@ -2,7 +2,7 @@
 
   document.addEventListener('DOMContentLoaded', () => {
 
-    const swiperHead = new Swiper('.hero-slider', {
+    const swiperHead = new Swiper('.hero__slider', {
       speed: 1500,
       autoplay: {
         delay: 5000,

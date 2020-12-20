@@ -12,7 +12,7 @@
 	// получаем объект menu
 	const menu = document.querySelector('.js-menu-items');
 	const items = menu.querySelectorAll('.js-click-scroll');
-	const containers = document.querySelectorAll('.header__h2');
+	const containers = document.querySelectorAll('.header-h2');
 	const TOP_BORDER = 0;
 
 	// высота документа (страницы)
