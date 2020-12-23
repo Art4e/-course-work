@@ -26,11 +26,12 @@
   height: 757px;
   letter-spacing: 0.3px;
 }
+
 .gallery__colum-left {
   width: 25%;
 }
 
-.bod__filter {
+.body__filter {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -42,7 +43,7 @@
   font-weight: 600;
 }
 
-.bod__filter > .choices {
+.body__filter>.choices {
   display: flex;
   align-items: center;
   margin-bottom: 0;
@@ -52,30 +53,36 @@
   background-color: transparent;
 }
 
-.bod__filter.choices__inner {
+.body__filter.choices__inner {
   padding: 0px 16px 0px 12px;
   background-color: transparent;
   font-size: 1.6rem;
 }
 
-.authors__items {
+.choices__list.choices__list--dropdown {
+  background-color: transparent;
+  color: #999;
 }
 
-.filter__direction {
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: var(--fonts-secondary-color);
 }
 
-.filter__technics {
-}
+.authors__items {}
 
-.bod__text {
+.filter__direction {}
+
+.filter__technics {}
+
+.body__text {
   padding-right: 20px;
 }
 
-.colum-left__link {
-}
+.colum-left__link {}
 
-.link {
-}
+.link {}
+
 .gallery__colum-right {
   max-width: 72%;
 }
@@ -89,7 +96,7 @@
   margin-right: -50px;
 }
 
-.gallery-slider.swiper-container > .swiper-wrapper {
+.gallery-slider.swiper-container>.swiper-wrapper {
   height: 750px;
 }
 
@@ -101,35 +108,70 @@
   margin-bottom: 28px;
 }
 
-.slider__navigation > .swiper-button-next,
-.slider__navigation > .swiper-button-prev {
+.slider__navigation>.swiper-button-next,
+.slider__navigation>.swiper-button-prev {
   position: relative;
+  z-index: 1500;
   margin-top: 0px;
   width: 30px;
   height: 30px;
   text-align: center;
+  outline: none;
 }
 
-.slider__navigation_gallery > .swiper-button-next,
-.slider__navigation_gallery > .swiper-button-prev,
-.slider__navigation_edition > .swiper-button-next,
-.slider__navigation_edition > .swiper-button-prev {
-  left: 4px;
+.slider__navigation_gallery>.swiper-button-next,
+.slider__navigation_gallery>.swiper-button-prev,
+.slider__navigation_edition>.swiper-button-next,
+.slider__navigation_edition>.swiper-button-prev {
+  left: 8px;
   right: 0;
 }
-.slider__navigation > .swiper-button-next:after,
-.slider__navigation > .swiper-button-prev:after {
-  margin-top: 0;
-  width: 30px;
-  height: 30px;
+
+.slider__navigation>.swiper-button-next:after,
+.slider__navigation>.swiper-button-prev:after {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  background-color: #666;
+  background-color: #ECECEC;
   font-size: 1rem;
   line-height: 3rem;
-  color: var(--fonts-secondary-color);
+  color: #000;
+  border: 2px solid transparent;
+}
+
+.slider__navigation>.swiper-button-next:after {
+  left: -10px;
+}
+
+.slider__navigation>.swiper-button-prev:after {
+  left: 2px;
+}
+
+.slider__navigation>.swiper-button-next:hover::after,
+.slider__navigation>.swiper-button-prev:hover::after {
+  background-color: var(--main-highlight-color);
+  color: #fff;
+}
+
+.slider__navigation>.swiper-button-next:active::after,
+.slider__navigation>.swiper-button-prev:active::after {
+  background-color: var(--link-focus);
+  border-color: #D1A9F0;
+  color: #fff;
+
+}
+
+.slider__navigation>.swiper-button-next:focus::after,
+.slider__navigation>.swiper-button-prev:focus::after {
+  border: var(--link-focus-outline);
 }
 
 .slider__pagination {
+  margin-left: 21px;
+  width: 100%;
   text-align: center;
   color: var(--fonts-secondary-color);
 }
@@ -137,6 +179,7 @@
 .gallery__item {
   height: calc((100% - 50px) / 2);
 }
+
 .gallery-slider__img {
   position: relative;
   cursor: pointer;
@@ -144,6 +187,7 @@
   width: 100%;
   height: 100%;
 }
+
 .gallery__item::after {
   position: absolute;
   content: "";
@@ -155,10 +199,12 @@
   background-color: rgba(0, 0, 0, 0);
   transition: background-color, background 0.3s ease-in-out;
 }
+
 .gallery__item:hover::after {
   background: url("../img/gallery/icon-magnifier.svg") 50% no-repeat;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 .gallery__item:hover {
   /* border: 2px solid #fff; */
 }

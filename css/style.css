@@ -223,10 +223,11 @@ body {
 .choices__inner {
   min-height: 2rem;
   padding: 0;
+  padding-left: 12px;
   background-color: transparent;
   outline: transparent;
   border: none;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1;
 }
 

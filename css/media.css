@@ -91,7 +91,7 @@
     padding-bottom: 80px;
   }
 
-  .bod__text {
+  .body__text {
     margin-bottom: -15px;
   }
 
@@ -113,7 +113,7 @@
     font-size: 1.6rem;
   }
 
-  .bod__text {
+  .body__text {
     margin-bottom: -12px;
     padding-right: 10px;
   }
@@ -406,13 +406,13 @@
     height: 100%;
   }
 
-  .bod__filter {
+  .body__filter {
     order: -1;
     padding-right: 58%;
     margin-bottom: 5px;
   }
 
-  .bod__text {
+  .body__text {
     width: 100%;
   }
 
@@ -672,7 +672,7 @@
     padding-bottom: 39px;
   }
 
-  .bod__filter {
+  .body__filter {
     padding-right: 0;
   }
 
