@@ -4,32 +4,27 @@
 
     const swiperHead = new Swiper('.hero__slider', {
       speed: 1500,
-      autoplay: {
-        delay: 5000,
-        autoplayDisableOnInteraction: false,
-      },
+      // autoplay: {
+      //   delay: 5000,
+      //   autoplayDisableOnInteraction: false,
+      // },
       loop: true,
-      effect: 'fade',
-      a11y: {
-        prevSlideMessage: 'Предыдущий слайд',
-        nextSlideMessage: 'Следующий слайд',
-        paginationBulletMessage: 'Перейти к слайду {{index}}',
-      },
-      scrollbar: {
-        hide: true,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        bulletElement: 'button',
-        clickable: true,
-      },
+      effect: 'fade'
+      // scrollbar: {
+      //   hide: true,
+      // },
+      // pagination: {
+      //   el: '.swiper-pagination',
+      //   bulletElement: 'button',
+      //   clickable: true,
+      // }
     });
 
     // Открываем, закрываем бургер меню
     const headUpEl = document.querySelector('.js-head-up');
     headUpEl.addEventListener('click', (ev) => {
       const bodyEl = document.querySelector('body');
-      const burgerEl = headUpEl.querySelector('.js-header__burger');
+      const burgerEl = headUpEl.querySelector('.js-header-burger');
       const burgerBodyEl = burgerEl.querySelector('span');
       const burgerMenuEl = headUpEl.querySelector('.js-header__menu');
       const comeInEl = headUpEl.querySelector('.js-come-in');
@@ -147,8 +142,8 @@
         }
       },
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
+        nextEl: '.slider-button-next',
+        prevEl: '.slider-button-prev'
       },
       a11y: {
         prevSlideMessage: 'Предыдущий слайд',
@@ -162,7 +157,7 @@
     });
 
     // слайдер издания
-    const swiperEdition = new Swiper('.edition__slider', {
+    const swiperEdition = new Swiper('.edition-slider ', {
       breakpoints: {
 
         1201: {
@@ -187,8 +182,8 @@
         }
       },
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
+        nextEl: '.edition-slider-btn-next',
+        prevEl: '.edition-slider-btn-prev'
       },
       a11y: {
         prevSlideMessage: 'Предыдущий слайд',
@@ -203,7 +198,7 @@
 
 
     // слайдер - партнеры
-    const swiperPartners = new Swiper('.projects__slaider', {
+    const swiperPartners = new Swiper('.projects-slaider', {
       breakpoints: {
         1200: {
           slidesPerView: 3,
@@ -225,8 +220,8 @@
         },
       },
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
+        nextEl: '.projects-slaider__btn-next',
+        prevEl: '.projects-slaider__btn-prev'
       },
       a11y: {
         prevSlideMessage: 'Предыдущий слайд',
@@ -240,7 +235,6 @@
       if (!selectAllEl) return;
       selectAllEl.forEach(el => {
         const realism = new Choices(el, {
-
           searchEnabled: false,
           shouldSort: false,
           itemSelectText: '',

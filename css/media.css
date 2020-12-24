@@ -4,7 +4,7 @@
     padding-right: calc(12.28vw - 75.714px);
   }
 
-  .header__item {
+  .menu__item {
     margin-right: calc(5.56vw - 41.667px);
   }
 
@@ -20,13 +20,14 @@
     padding-right: calc(83.04vw - 586.29px);
   }
 
-  .block__text {
+  .block-text {
     padding-right: calc(58.15vw - 595.43px);
   }
-
   .projects__slaider {
-    padding-left: calc(2.57vw + 26.714px);
-    padding-right: calc(2.57vw + 26.714px);
+  }
+  .projects-slaider {
+    margin-left: calc(2.57vw + 26.714px);
+    margin-right: calc(2.57vw + 26.714px);
   }
 
   :root {
@@ -54,7 +55,7 @@
     top: 7px;
   }
 
-  .header__item {
+  .menu__item {
     margin-right: 25px;
   }
 
@@ -71,7 +72,7 @@
   }
 
   .menu-item__body,
-  .menu-item__head:hover+.menu-item__body {
+  .menu-item__head:hover + .menu-item__body {
     top: 47px;
   }
 
@@ -91,7 +92,7 @@
     padding-bottom: 80px;
   }
 
-  .body__text {
+  .body-text {
     margin-bottom: -15px;
   }
 
@@ -104,7 +105,7 @@
     padding: 24px 38px 24px 0;
   }
 
-  .gallery__colum-left {
+  .gallery__body_left-colum {
     width: 30.5%;
   }
 
@@ -113,12 +114,12 @@
     font-size: 1.6rem;
   }
 
-  .body__text {
+  .body-text {
     margin-bottom: -12px;
     padding-right: 10px;
   }
 
-  .gallery__colum-right {
+  .gallery-slider {
     max-width: 64.5%;
     /* margin-right: -50px; */
   }
@@ -130,7 +131,7 @@
   /* .gallery-slider.swiper-container {
   }*/
 
-  .gallery-slider.swiper-container>.swiper-wrapper {
+  .gallery-slider.swiper-container > .swiper-wrapper {
     height: 602px;
   }
 
@@ -171,11 +172,11 @@
     height: 610px;
   }
 
-  .edition__colum-left {
+  .categories {
     width: auto;
   }
 
-  .edition__checkbox {
+  .edition__categories {
     height: 100%;
   }
 
@@ -185,20 +186,20 @@
     margin-top: 26px;
   }
 
-  .checkbox__head_price {
+  .categories__head_price {
     margin-top: 3px;
     margin-bottom: 0;
     margin-right: 17px;
   }
 
-  .edition__slider {
+  .edition-slider {
     width: 68%;
     height: 93%;
     margin-top: -30px;
     margin-right: 2px;
   }
 
-  .edition__slides {
+  .edition-slider__slides {
     padding-top: 61px;
   }
 
@@ -223,12 +224,12 @@
     margin-bottom: 3px;
   }
 
-  .slider__navigation.slider__navigation_projects .swiper-button-next,
-  .slider__navigation.slider__navigation_projects .swiper-button-prev {
+  .projects-slaider__btn-next,
+  .projects-slaider__btn-prev {
     top: 66px;
   }
 
-  .projects__slaid {
+  .projects-slaider__slaid {
     height: 128px;
   }
 
@@ -261,7 +262,7 @@
     display: flex;
   }
 
-  .head-up__container {
+  .header__container_up {
     padding: 28px 0;
   }
 
@@ -269,7 +270,7 @@
     height: 768px;
   }
 
-  .header__burger {
+  .burger {
     display: block;
     order: 0;
     margin-left: -2px;
@@ -277,7 +278,7 @@
     padding-left: 2px;
   }
 
-  .header__burger.activ::before {
+  .burger.activ::before {
     display: block;
   }
 
@@ -389,7 +390,8 @@
     padding-right: calc(97.66vw - 750px);
   }
 
-  .solutions__button {}
+  .solutions__button {
+  }
 
   .footer__container {
     padding-bottom: 36px;
@@ -412,11 +414,11 @@
     margin-bottom: 5px;
   }
 
-  .body__text {
+  .body-text {
     width: 100%;
   }
 
-  .gallery__colum-right {
+  .gallery-slider {
     max-width: 100%;
     order: -1;
   }
@@ -477,11 +479,11 @@
     height: auto;
   }
 
-  .edition__checkbox {
+  .edition__categories {
     width: 100%;
   }
 
-  .checkbox__body {
+  .categories__body {
     flex-wrap: wrap;
     height: 130px;
     align-content: space-between;
@@ -495,11 +497,11 @@
     margin-bottom: 49px;
   }
 
-  .checkbox__head_price {
+  .categories__head_price {
     margin-bottom: 7px;
   }
 
-  .edition__slider {
+  .edition-slider {
     width: 100%;
     height: auto;
     margin-top: 0;
@@ -507,7 +509,7 @@
     padding-right: 27px;
   }
 
-  .edition__slides {
+  .edition-slider__slides {
     width: 100%;
     margin: auto;
   }
@@ -529,12 +531,12 @@
     margin-bottom: 4px;
   }
 
-  .slider__navigation.slider__navigation_projects .swiper-button-next,
-  .slider__navigation.slider__navigation_projects .swiper-button-prev {
+  .swiper-button-next,
+  .projects-slaider__btn-prev {
     top: 55px;
   }
 
-  .projects__slaid {
+  .projects-slaider__slaid {
     height: 106px;
   }
 
@@ -600,11 +602,11 @@
     margin-top: 45px;
   }
 
-  .head-up__container {
+  .header__container_up {
     margin: 12px 0 1px;
   }
 
-  .header__burger,
+  .burger,
   .head-up__search {
     width: 21px;
     height: 22px;
@@ -661,7 +663,7 @@
     padding-bottom: 39px;
   }
 
-  .block__text {
+  .block-text {
     padding-top: 0;
     font-size: 14px;
     letter-spacing: 0.1px;
@@ -676,7 +678,7 @@
     padding-right: 0;
   }
 
-  .gallery__colum-left {
+  .gallery__body_left-colum {
     width: 100%;
   }
 
@@ -696,7 +698,7 @@
     width: 70px;
   }
 
-  .checkbox__body {
+  .categories__body {
     height: auto;
   }
 
@@ -720,4 +722,5 @@
   }
 }
 
-@media (max-width: 510px) {}
+@media (max-width: 510px) {
+}

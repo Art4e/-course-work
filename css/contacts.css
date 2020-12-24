@@ -1,5 +1,6 @@
 .header-h2_contacts {
-  margin-bottom: 17px;
+  margin-top: -11px;
+  margin-bottom: 16px;
 }
 
 .contacts__body {
@@ -8,7 +9,7 @@
   flex-wrap: wrap;
   justify-content: right;
   width: 100%;
-  height: 700px;
+  height: 698px;
 }
 
 .contacts__colum-left {
@@ -36,7 +37,8 @@
   letter-spacing: -0.5px;
 }
 
-.header__h3_contacts {}
+.header__h3_contacts {
+}
 
 .header__h3_form {
   margin-bottom: 8px;

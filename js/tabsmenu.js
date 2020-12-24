@@ -30,6 +30,9 @@
 		if (!tabsmenu) return;
 		const content = document.querySelector(tabContainerNode);
 
+		const activDefaultBlockEl = content.querySelectorAll('.tab__Item')[0];
+		activDefaultBlockEl.style.display = 'block';
+
 		[].forEach.call(tabsmenu, (menu) => {
 			menu.addEventListener('click', (el) => {
 				if (el.target.tagName == 'LI') {
@@ -41,5 +44,4 @@
 	};
 
 	creatTab('.js-tabs-menu', ".js-tabs-container");
-	// creatTab('.js-tabs-menu1', ".js-tabs-container1");
 })();
